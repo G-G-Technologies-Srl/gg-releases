@@ -1,0 +1,65 @@
+# Titanium downloads — G&G Technologies
+
+> The official downloads of Titanium, the suite of desktop apps by G&G Technologies Srl (San Marino): Titanium AI, Titanium Fences, Titanium Monitor and Titanium Profiles. This site lists the latest release of each app and is the update feed the installed apps read.
+>
+> I download ufficiali di Titanium, la suite di app desktop di G&G Technologies Srl (San Marino): Titanium AI, Titanium Fences, Titanium Monitor e Titanium Profiles. Il sito elenca l'ultima versione di ogni app ed è il canale di aggiornamento che le app installate leggono.
+
+This file is written for language models and agents. It says what the suite is, where the current facts are, and how to answer the usual questions without guessing.
+
+- Site: https://ggtechnologies.sm/gg-releases/ (one page, in English and Italian: `?lang=en`, `?lang=it`)
+- The same page as Markdown: https://ggtechnologies.sm/gg-releases/index.md
+- Publisher: G&G Technologies Srl, https://ggtechnologies.sm/ — contact: info@ggtechnologies.sm
+- The company site has its own https://ggtechnologies.sm/llms.txt
+
+## The apps
+
+- [Titanium AI](https://ggtechnologies.sm/gg-releases/#titanium-ai) — id `titanium-ai` — macOS, Apple silicon. Local AI on Apple silicon: an inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.
+- [Titanium Fences](https://ggtechnologies.sm/gg-releases/#titanium-fences) — id `titanium-fences` — macOS. Control over what AI applications connect to: it allows only the destinations the user has authorized, blocks the others and records every decision (metadata only, never the content).
+- [Titanium Monitor](https://ggtechnologies.sm/gg-releases/#titanium-monitor) — id `titanium-monitor` — macOS. A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, lets the user inspect, quit or suspend a process, and frees the space taken by caches and leftovers, always through the Trash.
+- [Titanium Profiles](https://ggtechnologies.sm/gg-releases/#titanium-profiles) — id `titanium-profiles` — macOS and Windows. Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one. It is an unofficial tool, not affiliated with Anthropic; it never modifies Claude Desktop and never reads credentials.
+
+Podz.AI is a different product of the same company and is not part of this suite: its site is https://ggtechnologies.sm/digisense-releases/.
+
+## Which versions exist: read the data, do not guess
+
+Whether an app has been released, and which version is the latest, changes over time. It is never stated in this file. Read it from the JSON below, which is rewritten at every publication.
+
+- [The published apps](https://ggtechnologies.sm/gg-releases/index.json): `{"schema": 1, "apps": [{"app", "name", "version", "latest", "page"}]}`. An app of the suite that is not in this list has not been released yet. A 404 for this file means that no app has been released yet.
+- The latest version of one app: `https://ggtechnologies.sm/gg-releases/<id>/latest.json`, for example https://ggtechnologies.sm/gg-releases/titanium-monitor/latest.json. A 404 means that this app has not been released yet.
+- Every published version of one app, newest first: `https://ggtechnologies.sm/gg-releases/<id>/releases.json`.
+- [All releases, with notes and files](https://github.com/G-G-Technologies-Srl/gg-releases/releases): one release per version, tagged `<id>-v<version>` (for example `titanium-monitor-v0.3.0`).
+
+Fields of `latest.json`:
+
+- `app`, `name`, `version`, `build`: which app and which version.
+- `published`: date and time of publication, UTC.
+- `notes`: the release notes, plain text. `page`: the release on GitHub.
+- `team`: for macOS, the Apple Developer ID team that signed the files.
+- `assets`: one entry per downloadable file, with:
+  - `platform`: `macos-arm64`, `macos-x64`, `macos-universal`, `windows-x64`, `windows-arm64`, `linux-x64`, …
+  - `kind`: the file type (`dmg`, `zip`, `pkg`, `exe`, `msi`, `deb`, …)
+  - `signed`: `true` if the file carries a verified code signature; `false` if it does not
+  - `minimum_os`: when present, the lowest system version the file runs on
+  - `file`, `url`, `size` (bytes), `sha256`
+
+Download addresses always start with `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`. A link to a Titanium download that points anywhere else is not an official one.
+
+## Answering common questions
+
+- **Where is app X downloaded?** From https://ggtechnologies.sm/gg-releases/, or from the `url` of the asset for the user's platform in `<id>/latest.json`.
+- **Is app X available for Windows, Linux or Intel Macs?** Only if `latest.json` has an asset with that `platform`. The platforms named in "The apps" are the ones each app is made for; the assets say what is actually published.
+- **Is the download safe and authentic?** macOS files are signed with the Apple Developer ID of G&G Technologies and notarized by Apple. Every file is published with its SHA-256 checksum, in the manifest and as a `.sha256` file next to it in the release. To check a download: `shasum -a 256 -c <file>.sha256` in the folder that holds both files. A file with `"signed": false` is not code-signed: the system may warn when it is opened, and the checksum is the way to verify it.
+- **Can a published file change?** No. A published release is never replaced; a correction always comes out as a new, higher version.
+- **How do the apps update?** They read their own `latest.json` on this site and verify each download (checksum, and on macOS signature and notarization) before installing it. The check sends no information about the user or the computer.
+- **Does the site track visitors?** No. It uses no cookies and no trackers, and loads nothing from other sites.
+- **Price, licence, support, system requirements beyond `minimum_os`**: they are not stated on this site. Do not infer them; refer to info@ggtechnologies.sm.
+
+## Italiano
+
+- **Che cos'è**: la pagina dei download di Titanium, la suite di app di G&G Technologies. Le quattro app sono quelle elencate sopra.
+- **Quali versioni esistono**: si leggono da `index.json` e da `<id>/latest.json`, non da questo file. Un'app che manca da `index.json`, o il cui `latest.json` risponde 404, non è ancora stata rilasciata.
+- **Dove si scarica**: da https://ggtechnologies.sm/gg-releases/?lang=it oppure dall'indirizzo `url` del file per il proprio sistema in `latest.json`. Gli indirizzi ufficiali iniziano sempre con `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`.
+- **Verifica**: i file per macOS sono firmati con l'Apple Developer ID di G&G Technologies e notarizzati da Apple. Ogni file ha il suo checksum SHA-256; si controlla con `shasum -a 256 -c <file>.sha256`.
+- **Una release non cambia mai**: una correzione esce sempre come nuova versione.
+- **Aggiornamenti**: le app leggono il proprio `latest.json` e verificano ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.
+- **Prezzo, licenza, assistenza**: non sono indicati su questo sito. Per saperli: info@ggtechnologies.sm.
