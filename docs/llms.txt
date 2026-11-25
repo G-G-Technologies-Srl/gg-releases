@@ -6,7 +6,8 @@
 
 This file is written for language models and agents. It says what the suite is, where the current facts are, and how to answer the usual questions without guessing.
 
-- Site: https://ggtechnologies.sm/gg-releases/ (one page, in English and Italian: `?lang=en`, `?lang=it`)
+- Site: https://ggtechnologies.sm/gg-releases/ (in English and Italian: `?lang=en`, `?lang=it`)
+- The page of a published app: `https://ggtechnologies.sm/gg-releases/<id>/`, with the download for each system, the release notes and every version. It exists only once the app has been released; before that it answers 404.
 - The same page as Markdown: https://ggtechnologies.sm/gg-releases/index.md
 - Publisher: G&G Technologies Srl, https://ggtechnologies.sm/ — contact: info@ggtechnologies.sm
 - The company site has its own https://ggtechnologies.sm/llms.txt
@@ -27,7 +28,7 @@ Whether an app has been released, and which version is the latest, changes over 
 - [The published apps](https://ggtechnologies.sm/gg-releases/index.json): `{"schema": 1, "apps": [{"app", "name", "version", "latest", "page"}]}`. An app of the suite that is not in this list has not been released yet. A 404 for this file means that no app has been released yet.
 - The latest version of one app: `https://ggtechnologies.sm/gg-releases/<id>/latest.json`, for example https://ggtechnologies.sm/gg-releases/titanium-monitor/latest.json. A 404 means that this app has not been released yet.
 - Every published version of one app, newest first: `https://ggtechnologies.sm/gg-releases/<id>/releases.json`.
-- [All releases, with notes and files](https://github.com/G-G-Technologies-Srl/gg-releases/releases): one release per version, tagged `<id>-v<version>` (for example `titanium-monitor-v0.3.0`).
+- The page of the app, `https://ggtechnologies.sm/gg-releases/<id>/`, shows the same data for people: every version with its notes, files and checksums. The files are attached to GitHub Releases of the public repository G-G-Technologies-Srl/gg-releases, one release per version, tagged `<id>-v<version>` (for example `titanium-monitor-v0.3.0`).
 
 Fields of `latest.json`:
 
@@ -46,7 +47,8 @@ Download addresses always start with `https://github.com/G-G-Technologies-Srl/gg
 
 ## Answering common questions
 
-- **Where is app X downloaded?** From https://ggtechnologies.sm/gg-releases/, or from the `url` of the asset for the user's platform in `<id>/latest.json`.
+- **Where is app X downloaded?** From its page, `https://ggtechnologies.sm/gg-releases/<id>/`, which offers the file for the visitor's system first; or from the `url` of the asset for the user's platform in `<id>/latest.json`. A link that also starts the download of the latest version: `https://ggtechnologies.sm/gg-releases/<id>/?download=macos` (or `windows`, `linux`, an exact platform such as `windows-x64`, or `?download` alone for the visitor's system). Give that link only for an app whose `latest.json` exists.
+- **What changed in a version?** The `notes` of `<id>/releases.json`, or the page of the app. Release notes are written in English.
 - **Is app X available for Windows, Linux or Intel Macs?** Only if `latest.json` has an asset with that `platform`. The platforms named in "The apps" are the ones each app is made for; the assets say what is actually published.
 - **Is the download safe and authentic?** macOS files are signed with the Apple Developer ID of G&G Technologies and notarized by Apple. Every file is published with its SHA-256 checksum, in the manifest and as a `.sha256` file next to it in the release. To check a download: `shasum -a 256 -c <file>.sha256` in the folder that holds both files. A file with `"signed": false` is not code-signed: the system may warn when it is opened, and the checksum is the way to verify it.
 - **Can a published file change?** No. A published release is never replaced; a correction always comes out as a new, higher version.
@@ -58,7 +60,7 @@ Download addresses always start with `https://github.com/G-G-Technologies-Srl/gg
 
 - **Che cos'è**: la pagina dei download di Titanium, la suite di app di G&G Technologies. Le quattro app sono quelle elencate sopra.
 - **Quali versioni esistono**: si leggono da `index.json` e da `<id>/latest.json`, non da questo file. Un'app che manca da `index.json`, o il cui `latest.json` risponde 404, non è ancora stata rilasciata.
-- **Dove si scarica**: da https://ggtechnologies.sm/gg-releases/?lang=it oppure dall'indirizzo `url` del file per il proprio sistema in `latest.json`. Gli indirizzi ufficiali iniziano sempre con `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`.
+- **Dove si scarica**: dalla pagina dell'app, `https://ggtechnologies.sm/gg-releases/<id>/?lang=it`, che propone per primo il file per il sistema di chi visita (con `&download=macos` o `&download=windows` il download parte da solo), oppure dall'indirizzo `url` del file per il proprio sistema in `latest.json`. Gli indirizzi ufficiali iniziano sempre con `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`.
 - **Verifica**: i file per macOS sono firmati con l'Apple Developer ID di G&G Technologies e notarizzati da Apple. Ogni file ha il suo checksum SHA-256; si controlla con `shasum -a 256 -c <file>.sha256`.
 - **Una release non cambia mai**: una correzione esce sempre come nuova versione.
 - **Aggiornamenti**: le app leggono il proprio `latest.json` e verificano ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.

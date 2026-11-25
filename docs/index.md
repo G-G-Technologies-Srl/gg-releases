@@ -5,7 +5,8 @@ Every Titanium app, signed and ready to download.
 Titanium is the suite of apps by [G&G Technologies](https://ggtechnologies.sm/). This page lists the latest release of each app, and it is where the installed apps find their updates.
 
 - Page: https://ggtechnologies.sm/gg-releases/
-- All releases: https://github.com/G-G-Technologies-Srl/gg-releases/releases
+- Every published app has its own page, with the download for each system, the release notes and every version: `https://ggtechnologies.sm/gg-releases/<id>/`, for example https://ggtechnologies.sm/gg-releases/titanium-monitor/
+- A link to the page that also starts the download of the latest version: add `?download=macos`, `?download=windows`, `?download=linux`, an exact platform such as `?download=windows-x64`, or `?download` alone for the visitor's own system.
 - For language models and agents: https://ggtechnologies.sm/gg-releases/llms.txt
 
 ## The Titanium suite
@@ -52,7 +53,7 @@ A download is worth installing only if it can be checked. These three rules hold
 
 ## Checking a download
 
-Download the `.sha256` file found next to the app in its release, then run this command in the folder that holds both files.
+Download the `.sha256` file offered next to each file on the page of the app, then run this command in the folder that holds both files.
 
 ```bash
 shasum -a 256 -c <file>.sha256
@@ -71,7 +72,8 @@ Ogni app Titanium, firmata e pronta da scaricare.
 Titanium è la suite di app di [G&G Technologies](https://ggtechnologies.sm/). Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.
 
 - Pagina: https://ggtechnologies.sm/gg-releases/?lang=it
-- Tutte le versioni: https://github.com/G-G-Technologies-Srl/gg-releases/releases
+- Ogni app pubblicata ha la sua pagina, con il download per ogni sistema, le note di rilascio e tutte le versioni: `https://ggtechnologies.sm/gg-releases/<id>/`, per esempio https://ggtechnologies.sm/gg-releases/titanium-monitor/?lang=it
+- Un link alla pagina che fa anche partire il download dell'ultima versione: si aggiunge `?download=macos`, `?download=windows`, `?download=linux`, una piattaforma esatta come `?download=windows-x64`, oppure `?download` da solo per il sistema di chi visita.
 
 ## La suite Titanium
 
@@ -113,7 +115,7 @@ Un download merita di essere installato solo se si può verificare. Queste tre r
 
 ## Verificare un download
 
-Si scarica il file `.sha256` che si trova accanto all'app nella sua release, poi si esegue questo comando nella cartella che contiene i due file.
+Si scarica il file `.sha256` offerto accanto a ogni file nella pagina dell'app, poi si esegue questo comando nella cartella che contiene i due file.
 
 ```bash
 shasum -a 256 -c <file>.sha256

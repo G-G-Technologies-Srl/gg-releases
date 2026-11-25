@@ -69,7 +69,6 @@
           "operatingSystem": "macOS",
           "applicationCategory": "DeveloperApplication",
           "installUrl": "https://ggtechnologies.sm/gg-releases/",
-          "releaseNotes": "https://github.com/G-G-Technologies-Srl/gg-releases/releases",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -85,7 +84,6 @@
           "operatingSystem": "macOS",
           "applicationCategory": "SecurityApplication",
           "installUrl": "https://ggtechnologies.sm/gg-releases/",
-          "releaseNotes": "https://github.com/G-G-Technologies-Srl/gg-releases/releases",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -101,7 +99,6 @@
           "operatingSystem": "macOS",
           "applicationCategory": "UtilitiesApplication",
           "installUrl": "https://ggtechnologies.sm/gg-releases/",
-          "releaseNotes": "https://github.com/G-G-Technologies-Srl/gg-releases/releases",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -117,7 +114,6 @@
           "operatingSystem": "macOS, Windows",
           "applicationCategory": "UtilitiesApplication",
           "installUrl": "https://ggtechnologies.sm/gg-releases/",
-          "releaseNotes": "https://github.com/G-G-Technologies-Srl/gg-releases/releases",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       }
@@ -241,6 +237,7 @@
   .card:hover::before, .card.released::before { opacity: 1; }
   .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
+  .card h3 a:hover { color: var(--accent-text); }
   .pill { flex: 0 0 auto; font-size: 0.78rem; font-weight: 600; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--border-strong); color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .pill.version { color: var(--accent-text); border-color: transparent; background: var(--tint); }
   .card-text { color: var(--muted); font-size: 0.94rem; }
@@ -318,7 +315,6 @@
     <div class="nav-links">
       <a href="#apps"><span class="en" lang="en">Apps</span><span class="it" lang="it">App</span></a>
       <a href="#trust"><span class="en" lang="en">Verification</span><span class="it" lang="it">Verifica</span></a>
-      <a href="https://github.com/G-G-Technologies-Srl/gg-releases/releases"><span class="en" lang="en">All releases</span><span class="it" lang="it">Tutte le versioni</span></a>
       <div class="lang-switch" role="group" aria-label="Lingua · Language">
         <button type="button" data-lang="it" aria-pressed="false">IT</button>
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -389,7 +385,7 @@
         </div>
         <div class="point">
           <h3><span class="en" lang="en">A checksum for every file</span><span class="it" lang="it">Un checksum per ogni file</span></h3>
-          <p><span class="en" lang="en">Each file is published with its SHA-256 checksum, both on this page and next to the file in its release.</span><span class="it" lang="it">Ogni file è pubblicato con il suo checksum SHA-256, in questa pagina e accanto al file nella sua release.</span></p>
+          <p><span class="en" lang="en">Each file is published with its SHA-256 checksum, shown on this site next to the file.</span><span class="it" lang="it">Ogni file è pubblicato con il suo checksum SHA-256, mostrato su questo sito accanto al file.</span></p>
         </div>
         <div class="point">
           <h3><span class="en" lang="en">A release never changes</span><span class="it" lang="it">Una release non cambia mai</span></h3>
@@ -403,8 +399,8 @@
     <section>
       <h2><span class="en" lang="en">Checking a download</span><span class="it" lang="it">Verificare un download</span></h2>
       <p>
-        <span class="en" lang="en">Download the <code>.sha256</code> file found next to the app in its release, then run this command in the folder that holds both files.</span>
-        <span class="it" lang="it">Si scarica il file <code>.sha256</code> che si trova accanto all'app nella sua release, poi si esegue questo comando nella cartella che contiene i due file.</span>
+        <span class="en" lang="en">Download the <code>.sha256</code> file offered next to each file on the page of the app, then run this command in the folder that holds both files.</span>
+        <span class="it" lang="it">Si scarica il file <code>.sha256</code> offerto accanto a ogni file nella pagina dell'app, poi si esegue questo comando nella cartella che contiene i due file.</span>
       </p>
       <pre><code>shasum -a 256 -c &lt;file&gt;.sha256</code></pre>
     </section>
@@ -430,7 +426,6 @@
       </div>
       <div class="footer-links">
         <a href="https://ggtechnologies.sm/">ggtechnologies.sm</a>
-        <a href="https://github.com/G-G-Technologies-Srl/gg-releases/releases"><span class="en" lang="en">All releases</span><span class="it" lang="it">Tutte le versioni</span></a>
         <a href="mailto:info@ggtechnologies.sm">info@ggtechnologies.sm</a>
       </div>
     </div>
@@ -469,6 +464,9 @@
     node.appendChild(el("span", "it", it)).lang = "it";
     return node;
   }
+
+  // page(id): the page of a published app, with its notes and every version.
+  function page(id) { return encodeURIComponent(id) + "/"; }
 
   function here(url) {
     return typeof url === "string" && url.indexOf(RELEASES + "/") === 0;
@@ -574,10 +572,15 @@
       if (!minimum && asset.minimum_os && String(asset.platform).indexOf("macos") === 0) minimum = asset.minimum_os;
     });
     if (minimum) foot.appendChild(both(el("span"), "Requires macOS " + minimum + " or later", "Richiede macOS " + minimum + " o successivo"));
-    if (here(latest.page)) {
-      var notes = both(el("a"), "Release notes", "Note di rilascio");
-      notes.href = latest.page;
-      foot.appendChild(notes);
+    var more = both(el("a"), "Release notes and all versions", "Note di rilascio e tutte le versioni");
+    more.href = page(view.node.id);
+    foot.appendChild(more);
+    var title = view.node.querySelector("h3");
+    if (title && !title.querySelector("a")) {
+      var name = el("a", "", title.textContent);
+      name.href = page(view.node.id);
+      title.textContent = "";
+      title.appendChild(name);
     }
     view.body.appendChild(foot);
 
