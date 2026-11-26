@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "app": "titanium-profiles",
+  "name": "Titanium Profiles",
+  "version": "0.2.0",
+  "build": "0.2.0",
+  "published": "2026-11-26T18:29:58Z",
+  "tag": "titanium-profiles-v0.2.0",
+  "team": "VL2V35Z2H7",
+  "notes": "- Updates: the app checks the G&G download site once a day (on by default, can be turned off in Settings › Updates), and on request with Check for Updates… in Settings, the tray menu and the macOS application menu. On macOS, Install and Relaunch downloads the signed and notarized disk image, verifies it and replaces the app in place; on Windows the app opens the release page. The check sends only the app's name and version.\n- One copy of the app: after an update the old version and the download are removed, and a newer copy placed in Applications meanwhile is never replaced; started outside Applications, the app offers to move itself there.\n- The dashboard opens with the profiles, all visible even in the smallest window, with how many are running next to their heading; Claude Code usage moves below what to check.\n- Statistics draws every profile in its own color, the one of its icon.\n- Simpler profile cards; a shortcut the system refused is said in words, with a Change button.\n- Every section has the same frame and header; the sidebar puts Dashboard, Profiles and Statistics on top; Settings has an index of its groups.\n- Fixed: two starts of the same profile at the same moment no longer open two instances on the same data folder; after Restart the new instance no longer shows as closing; the app and the command line can read the statistics at the same time; moving a removed profile's data to the Trash keeps every folder another profile uses and never reaches the standard Claude Desktop folder; shortcuts no longer stop working now and then; importing a configuration applies its settings at once.\n- Also fixed: Logs no longer stays on \"Loading…\" and follows rotated logs without losing lines; \"&\" shows in the tray and the menu bar; the window could scroll past the content; every section opens at its top; the dashboard no longer shows \"0 of 0\" before its data arrives; event log warnings appear in the language of the app.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-profiles-v0.2.0",
+  "assets": [
+    {
+      "platform": "macos-arm64",
+      "kind": "dmg",
+      "signed": true,
+      "file": "TitaniumProfiles-0.2.0-macos-arm64.dmg",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.2.0/TitaniumProfiles-0.2.0-macos-arm64.dmg",
+      "size": 5126232,
+      "sha256": "e2e964a8d606082dcb0e9cefa91446576526f53d2a9d99880ee522f618c23433"
+    },
+    {
+      "platform": "windows-arm64",
+      "kind": "exe",
+      "signed": false,
+      "file": "TitaniumProfiles-0.2.0-windows-arm64.exe",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.2.0/TitaniumProfiles-0.2.0-windows-arm64.exe",
+      "size": 3779508,
+      "sha256": "aa7326007b52c1c31b05c16cde4580bbcb721a472f9d3185f9a191a852f16a33"
+    },
+    {
+      "platform": "windows-x64",
+      "kind": "exe",
+      "signed": false,
+      "file": "TitaniumProfiles-0.2.0-windows-x64.exe",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.2.0/TitaniumProfiles-0.2.0-windows-x64.exe",
+      "size": 4390558,
+      "sha256": "c25470061338baec531bf1a4ef73d0056e1414467e7bc84bcebdcb55de49702d"
+    }
+  ]
+}
