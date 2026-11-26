@@ -1,5 +1,5 @@
 <a href="https://ggtechnologies.sm/gg-releases/">
-  <img src="docs/readme-banner.svg" width="100%" alt="Titanium downloads, by G&G Technologies: every Titanium app, signed and ready to download.">
+  <img src="docs/readme-banner.svg" width="100%" alt="Titanium downloads, by G&G Technologies: the Titanium apps work on your computer and verify every update.">
 </a>
 
 <p align="center">
@@ -30,15 +30,15 @@
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-fences/">Titanium Fences</a></h3>
-      <p>Control over what your AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision: metadata only, never the content.</p>
+      <p>Control over what your AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.</p>
       <sub><b>macOS</b></sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-monitor/">Titanium Monitor</a> &nbsp;<sup><code>FREE</code></sup></h3>
+      <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-monitor/">Titanium Monitor</a> &nbsp;<sup><code>Free</code></sup></h3>
       <p>A menu bar utility that shows how CPU, GPU, memory, network and disk are being used, tells you in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.</p>
-      <p><b>Free, and always will be.</b></p>
+      <p><b>Free, including future versions.</b></p>
       <sub><b>macOS</b></sub>
     </td>
     <td width="50%" valign="top">
@@ -50,12 +50,12 @@
   </tr>
 </table>
 
-## Built to be trusted
+## What each download guarantees
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h4>Signed and notarized</h4>
+      <h4>macOS files are signed and notarized</h4>
       macOS downloads are signed with our Apple Developer ID and notarized by Apple.
     </td>
     <td width="33%" valign="top">
@@ -63,8 +63,8 @@
       Every file is published with its SHA-256 checksum, next to the file in its release.
     </td>
     <td width="33%" valign="top">
-      <h4>A release never changes</h4>
-      A published file is never replaced. A fix is always a new version.
+      <h4>Each version stays as published</h4>
+      A published file stays as it is. A fix is always a new version.
     </td>
   </tr>
 </table>

@@ -50,7 +50,7 @@
   "operatingSystem": "macOS",
   "applicationCategory": "UtilitiesApplication",
   "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Free, and always will be." }
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Free, including future versions." }
 }
 </script>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -161,16 +161,16 @@
   .notice { display: none; margin-bottom: 24px; padding: 14px 18px; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--tint); color: var(--muted); font-size: 0.94rem; }
   .notice.show { display: block; }
   .notice a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
   .card { background: linear-gradient(170deg, var(--panel-2), var(--panel) 60%); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.22s, box-shadow 0.22s; }
   .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); opacity: 0; transition: opacity 0.22s; }
   .card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
   .card:hover::before, .card.released::before { opacity: 1; }
-  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
   .card h3 a:hover { color: var(--accent-text); }
   .card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; line-height: 1; padding: 5px 10px 5px 11px; border-radius: 999px; background: var(--gradient); color: var(--btn-text); box-shadow: 0 4px 14px var(--btn-shadow); white-space: nowrap; }
+  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; padding: 4px 11px; border-radius: 999px; background: var(--tint); color: var(--accent-text); white-space: nowrap; }
   .card-free { color: var(--accent-text); font-size: 0.88rem; font-weight: 600; margin-top: 10px; }
   .card-more { margin-top: 12px; font-size: 0.86rem; }
   .card-more a { color: var(--accent-text); font-weight: 600; }
@@ -205,9 +205,10 @@
   .point { border-top: 2px solid var(--accent); padding-top: 18px; }
   .point h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
   .point p { color: var(--muted); font-size: 0.94rem; }
-  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 88px 0; align-items: start; }
+  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-top: 88px; padding-bottom: 88px; align-items: start; }
   .verify h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
   .verify p { color: var(--muted); font-size: 0.98rem; max-width: 34em; }
+  p.win { margin: 18px 0 10px; }
   pre { margin-top: 18px; padding: 16px 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--code-bg); font-family: var(--mono); font-size: 0.86rem; overflow-x: auto; }
 
   /* Footer */
@@ -244,8 +245,7 @@
   .app-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
   .title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 18px; }
   .title-row h1 { margin: 0; }
-  .title-row .free { font-size: 0.82rem; padding: 7px 14px 7px 15px; }
-  .app-free { color: var(--accent-text); font-weight: 600; font-size: 1.02rem; margin-top: 14px; }
+  .title-row .free { font-size: 0.86rem; padding: 7px 15px; }
   .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
   .features li { padding: 22px 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); color: var(--muted); font-size: 0.95rem; position: relative; }
   .features li::before { content: ""; position: absolute; left: 24px; top: 0; width: 36px; height: 2px; background: var(--gradient); }
@@ -264,6 +264,7 @@
   .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
   .shot { margin: 0; }
   .shot:last-child { grid-column: 1 / -1; }
+  .shot a { display: block; cursor: zoom-in; }
   .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
   .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
   .app-note { color: var(--faint); font-size: 0.92rem; margin-top: 14px; max-width: 560px; }
@@ -315,6 +316,7 @@
     .features { gap: 14px; }
     .shots { grid-template-columns: 1fr; }
     .shot-tall { max-width: 380px; }
+    .shot-tall { order: -1; }
   }
 </style>
 </head>
@@ -353,14 +355,13 @@
       <div class="app-hero">
         <div>
           <p class="eyebrow"><span class="en" lang="en">Titanium suite</span><span class="it" lang="it">Suite Titanium</span></p>
-          <div class="title-row"><h1>Titanium Monitor</h1><span class="free">FREE</span></div>
+          <div class="title-row"><h1>Titanium Monitor</h1><span class="free"><span class="en" lang="en">Free</span><span class="it" lang="it">Gratuita</span></span></div>
           <p class="hero-sub"><span class="en" lang="en">A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.</span><span class="it" lang="it">Un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.</span></p>
-          <p class="app-free"><span class="en" lang="en">Free, and always will be.</span><span class="it" lang="it">Gratuita, e lo resterà sempre.</span></p>
           <p class="app-note" hidden><span class="en" lang="en"></span><span class="it" lang="it"></span></p>
           <ul class="facts" id="facts"><li>macOS</li></ul>
         </div>
         <aside class="panel" id="download" aria-labelledby="download-title">
-          <h2 id="download-title"><span class="en" lang="en">Download</span><span class="it" lang="it">Scarica</span></h2>
+          <h2 id="download-title"><span class="en" lang="en">Download</span><span class="it" lang="it">Download</span></h2>
           <div id="panel">
             <p class="waiting"><span class="en" lang="en">Reading the latest version…</span><span class="it" lang="it">Lettura dell'ultima versione…</span></p>
             <noscript><p class="waiting"><span class="en" lang="en">This page needs JavaScript to read the latest version. The data is in <a href="latest.json" style="text-decoration: underline">latest.json</a>.</span><span class="it" lang="it">Questa pagina ha bisogno di JavaScript per leggere l'ultima versione. I dati sono in <a href="latest.json" style="text-decoration: underline">latest.json</a>.</span></p></noscript>
@@ -374,16 +375,16 @@
   <section class="section" id="about">
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span></p>
-      <h2><span class="en" lang="en">Your Mac, in plain words.</span><span class="it" lang="it">Il Mac, in chiaro.</span></h2>
-      <p class="lead"><span class="en" lang="en">Titanium Monitor lives in the menu bar and helps you keep an eye on the Mac and fix what is wrong. It never decides for you: it shows what it measures, says what it means, and asks before it touches anything.</span><span class="it" lang="it">Titanium Monitor vive nella barra dei menu e aiuta a tenere d'occhio il Mac e a sistemare ciò che non va. Non decide mai al posto vostro: mostra ciò che misura, dice che cosa significa e chiede prima di toccare qualcosa.</span></p>
+      <h2><span class="en" lang="en">The features of Titanium Monitor</span><span class="it" lang="it">Le funzioni di Titanium Monitor</span></h2>
+      <p class="lead"><span class="en" lang="en">Titanium Monitor lives in the menu bar and helps you keep an eye on the Mac and fix what is wrong. The decisions stay with you: it shows what it measures, says what it means, and asks before it touches anything.</span><span class="it" lang="it">Titanium Monitor vive nella barra dei menu e aiuta a tenere d'occhio il Mac e a sistemare ciò che non va. Le decisioni restano a voi: mostra ciò che misura, dice che cosa significa e chiede prima di toccare qualcosa.</span></p>
       <ul class="features">
-        <li><strong class="en" lang="en">From the menu bar</strong><strong class="it" lang="it">Dalla barra dei menu</strong><span class="en" lang="en">The figures you choose, each with its symbol: processor, memory, free space, disk activity, network speed. One click shows CPU, GPU, memory, network and the heaviest apps.</span><span class="it" lang="it">Le cifre che scegliete, ognuna con il suo simbolo: processore, memoria, spazio libero, attività del disco, velocità della rete. Con un clic, CPU, GPU, memoria, rete e le app che pesano di più.</span></li>
-        <li><strong class="en" lang="en">What is slowing the Mac down</strong><strong class="it" lang="it">Che cosa appesantisce il Mac</strong><span class="en" lang="en">In plain words: an app keeping the processor busy, a stuck process, low memory, swap, a nearly full disk, overheating.</span><span class="it" lang="it">Detto in chiaro: un'app che tiene occupato il processore, un processo bloccato, memoria scarsa, swap, disco quasi pieno, surriscaldamento.</span></li>
-        <li><strong class="en" lang="en">Processes grouped by app</strong><strong class="it" lang="it">Processi raggruppati per app</strong><span class="en" lang="en">A browser is one row, not twenty helpers. Processor, memory, GPU, network and energy for each; quit, force quit, or suspend a process and resume it later.</span><span class="it" lang="it">Un browser è una riga, non venti processi di servizio. Processore, memoria, GPU, rete e consumo di ciascuno; uscita normale o forzata, oppure sospendere un processo e farlo ripartire.</span></li>
+        <li><strong class="en" lang="en">The figures in the menu bar</strong><strong class="it" lang="it">Le cifre nella barra dei menu</strong><span class="en" lang="en">The figures you choose, each with its symbol: processor, memory, free space, disk activity, network speed. One click shows CPU, GPU, memory, network and the heaviest apps.</span><span class="it" lang="it">Le cifre che scegliete, ognuna con il suo simbolo: processore, memoria, spazio libero, attività del disco, velocità della rete. Con un clic, CPU, GPU, memoria, rete e le app che pesano di più.</span></li>
+        <li><strong class="en" lang="en">What is slowing the Mac down</strong><strong class="it" lang="it">Che cosa appesantisce il Mac</strong><span class="en" lang="en">In plain words: an app keeping the processor busy, a stuck process, low memory, swap, a nearly full disk, overheating.</span><span class="it" lang="it">In parole semplici: un'app che tiene occupato il processore, un processo bloccato, memoria scarsa, swap, disco quasi pieno, surriscaldamento.</span></li>
+        <li><strong class="en" lang="en">Processes grouped by app</strong><strong class="it" lang="it">Processi raggruppati per app</strong><span class="en" lang="en">A browser takes a single row, with all its helper processes. Processor, memory, GPU, network and energy for each; quit, force quit, suspend and resume.</span><span class="it" lang="it">Un browser occupa una sola riga, con tutti i suoi processi di servizio. Processore, memoria, GPU, rete e consumo di ciascuno; chiusura normale o forzata, sospensione e ripresa di un processo.</span></li>
         <li><strong class="en" lang="en">A card for every process</strong><strong class="it" lang="it">La scheda di ogni processo</strong><span class="en" lang="en">What it is and which app it belongs to, who signed the code and whether Apple checked it, its open files and connections. Where Apple Intelligence is on, it can explain the process in a few sentences, on the Mac.</span><span class="it" lang="it">Che cos'è e a quale app appartiene, chi ha firmato il codice e se Apple lo ha esaminato, i file aperti e le connessioni. Dove Apple Intelligence è attiva, può spiegare il processo in poche frasi, sul Mac.</span></li>
-        <li><strong class="en" lang="en">What deserves a look</strong><strong class="it" lang="it">Che cosa merita uno sguardo</strong><span class="en" lang="en">Broken signatures, code with no known signer that runs from temporary folders or talks to the network, new programs that start by themselves. No scores and no verdicts: each finding says what it means.</span><span class="it" lang="it">Firme rotte, codice senza garanti che gira da cartelle temporanee o parla in rete, nuovi programmi che partono da soli. Niente punteggi e niente verdetti: ogni rilievo dice che cosa significa.</span></li>
-        <li><strong class="en" lang="en">Space, cleaned through the Trash</strong><strong class="it" lang="it">Spazio, liberato passando dal Cestino</strong><span class="en" lang="en">How much each app and its data take. Caches, logs and what Xcode rebuilds, chosen from a list with the total in front of you; leftovers of removed apps one at a time. Never the real data of an app.</span><span class="it" lang="it">Quanto occupano ogni app e i suoi dati. Cache, log e ciò che Xcode ricrea, scelti da un elenco con il totale davanti; i resti di app rimosse uno alla volta. Mai i dati veri di un'app.</span></li>
-        <li><strong class="en" lang="en">Uninstall, knowing what stays</strong><strong class="it" lang="it">Disinstallare sapendo che cosa resta</strong><span class="en" lang="en">An app goes to the Trash with its data, and before you confirm you are told what its installer put elsewhere.</span><span class="it" lang="it">Un'app va nel Cestino con i suoi dati, e prima della conferma vi dice che cosa il suo installatore ha messo altrove.</span></li>
+        <li><strong class="en" lang="en">Findings that deserve attention</strong><strong class="it" lang="it">I rilievi che meritano attenzione</strong><span class="en" lang="en">Invalid signatures, code with no known signer that runs from temporary folders or connects to the network, new programs that start by themselves. Each finding explains what it means.</span><span class="it" lang="it">Firme non valide, codice senza una firma riconosciuta che si avvia da cartelle temporanee o comunica in rete, nuovi programmi che si avviano da soli. Ogni rilievo spiega che cosa significa.</span></li>
+        <li><strong class="en" lang="en">Space freed through the Trash</strong><strong class="it" lang="it">Lo spazio liberato passando dal Cestino</strong><span class="en" lang="en">How much each app and its data take. Caches, logs and what Xcode rebuilds, chosen from a list with the total in front of you; leftovers of removed apps one at a time. The data of the apps stays where it is.</span><span class="it" lang="it">Quanto occupano ogni app e i suoi dati. Cache, log e ciò che Xcode ricrea, scelti da un elenco con il totale davanti; i resti di app rimosse uno alla volta. I dati delle app restano dove sono.</span></li>
+        <li><strong class="en" lang="en">Uninstalling, knowing what stays</strong><strong class="it" lang="it">Disinstallare sapendo che cosa resta</strong><span class="en" lang="en">Titanium Monitor moves an app to the Trash with its data and, before you confirm, shows what its installer put elsewhere.</span><span class="it" lang="it">Titanium Monitor sposta un'app nel Cestino con i suoi dati e, prima della conferma, indica che cosa il suo programma di installazione ha messo altrove.</span></li>
         <li><strong class="en" lang="en">History and alerts</strong><strong class="it" lang="it">Storico e avvisi</strong><span class="en" lang="en">What weighed on the Mac and for how long, with charts of the last hour and the last day. If you want, a notification when the Mac stays under strain or memory runs out, with the name of the app responsible.</span><span class="it" lang="it">Che cosa ha pesato sul Mac e per quanto, con i grafici dell'ultima ora e dell'ultimo giorno. Se li volete, una notifica quando il Mac resta sotto sforzo o la memoria si esaurisce, con il nome dell'app responsabile.</span></li>
       </ul>
     </div>
@@ -392,28 +393,28 @@
   <section class="section" id="shots">
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">Screenshots</span><span class="it" lang="it">Schermate</span></p>
-      <h2><span class="en" lang="en">See it at work.</span><span class="it" lang="it">Come si presenta.</span></h2>
-      <p class="lead"><span class="en" lang="en">Drawn by the app itself on a demonstration Mac, with no real data.</span><span class="it" lang="it">Disegnate dall'app stessa su un Mac dimostrativo, senza dati reali.</span></p>
+      <h2><span class="en" lang="en">Screenshots of Titanium Monitor</span><span class="it" lang="it">Le schermate di Titanium Monitor</span></h2>
+      <p class="lead"><span class="en" lang="en">Drawn by the app itself on a demonstration Mac, with sample data.</span><span class="it" lang="it">Disegnate dall'app stessa su un Mac dimostrativo, con dati di esempio.</span></p>
       <div class="shots">
         <figure class="shot shot-wide">
-          <img class="en shot-dark" lang="en" src="shots/overview-en-dark.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="The overview: the state of the Mac in plain words, CPU, GPU and memory gauges, history charts and the heaviest apps.">
-          <img class="it shot-dark" lang="it" src="shots/overview-it-dark.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="La panoramica: lo stato del Mac in chiaro, gli indicatori di CPU, GPU e memoria, i grafici dello storico e le app che pesano di più.">
-          <img class="en shot-light" lang="en" src="shots/overview-en-light.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="The overview: the state of the Mac in plain words, CPU, GPU and memory gauges, history charts and the heaviest apps.">
-          <img class="it shot-light" lang="it" src="shots/overview-it-light.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="La panoramica: lo stato del Mac in chiaro, gli indicatori di CPU, GPU e memoria, i grafici dello storico e le app che pesano di più.">
+          <a class="en shot-dark" lang="en" href="shots/overview-en-dark.webp"><img src="shots/overview-en-dark.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="The overview: the state of the Mac in plain words, CPU, GPU and memory gauges, history charts and the heaviest apps."></a>
+          <a class="it shot-dark" lang="it" href="shots/overview-it-dark.webp"><img src="shots/overview-it-dark.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="La panoramica: lo stato del Mac in chiaro, gli indicatori di CPU, GPU e memoria, i grafici dello storico e le app che pesano di più."></a>
+          <a class="en shot-light" lang="en" href="shots/overview-en-light.webp"><img src="shots/overview-en-light.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="The overview: the state of the Mac in plain words, CPU, GPU and memory gauges, history charts and the heaviest apps."></a>
+          <a class="it shot-light" lang="it" href="shots/overview-it-light.webp"><img src="shots/overview-it-light.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="La panoramica: lo stato del Mac in chiaro, gli indicatori di CPU, GPU e memoria, i grafici dello storico e le app che pesano di più."></a>
           <figcaption><span class="en" lang="en">The overview: what is weighing the Mac down, in plain words, and where its resources go.</span><span class="it" lang="it">La panoramica: che cosa appesantisce il Mac, detto in chiaro, e dove vanno le sue risorse.</span></figcaption>
         </figure>
         <figure class="shot shot-tall">
-          <img class="en shot-dark" lang="en" src="shots/popover-en-dark.webp" width="760" height="1086" loading="lazy" decoding="async" alt="The menu bar popover: CPU, GPU, memory and network, with the apps that use them most.">
-          <img class="it shot-dark" lang="it" src="shots/popover-it-dark.webp" width="760" height="1086" loading="lazy" decoding="async" alt="Il riquadro della barra dei menu: CPU, GPU, memoria e rete, con le app che le usano di più.">
-          <img class="en shot-light" lang="en" src="shots/popover-en-light.webp" width="760" height="1086" loading="lazy" decoding="async" alt="The menu bar popover: CPU, GPU, memory and network, with the apps that use them most.">
-          <img class="it shot-light" lang="it" src="shots/popover-it-light.webp" width="760" height="1086" loading="lazy" decoding="async" alt="Il riquadro della barra dei menu: CPU, GPU, memoria e rete, con le app che le usano di più.">
-          <figcaption><span class="en" lang="en">From the menu bar, one click away.</span><span class="it" lang="it">Dalla barra dei menu, a un clic.</span></figcaption>
+          <a class="en shot-dark" lang="en" href="shots/popover-en-dark.webp"><img src="shots/popover-en-dark.webp" width="760" height="1086" loading="lazy" decoding="async" alt="The menu bar popover: CPU, GPU, memory and network, with the apps that use them most."></a>
+          <a class="it shot-dark" lang="it" href="shots/popover-it-dark.webp"><img src="shots/popover-it-dark.webp" width="760" height="1086" loading="lazy" decoding="async" alt="Il riquadro della barra dei menu: CPU, GPU, memoria e rete, con le app che le usano di più."></a>
+          <a class="en shot-light" lang="en" href="shots/popover-en-light.webp"><img src="shots/popover-en-light.webp" width="760" height="1086" loading="lazy" decoding="async" alt="The menu bar popover: CPU, GPU, memory and network, with the apps that use them most."></a>
+          <a class="it shot-light" lang="it" href="shots/popover-it-light.webp"><img src="shots/popover-it-light.webp" width="760" height="1086" loading="lazy" decoding="async" alt="Il riquadro della barra dei menu: CPU, GPU, memoria e rete, con le app che le usano di più."></a>
+          <figcaption><span class="en" lang="en">The menu bar popover, which opens with one click.</span><span class="it" lang="it">Il riquadro della barra dei menu, che si apre con un clic.</span></figcaption>
         </figure>
         <figure class="shot">
-          <img class="en shot-dark" lang="en" src="shots/processes-en-dark.webp" width="1600" height="954" loading="lazy" decoding="async" alt="The processes grouped by app, and the card of one process: who signed it, its explanation and its charts.">
-          <img class="it shot-dark" lang="it" src="shots/processes-it-dark.webp" width="1600" height="954" loading="lazy" decoding="async" alt="I processi raggruppati per app e la scheda di un processo: chi lo ha firmato, la spiegazione e i grafici.">
-          <img class="en shot-light" lang="en" src="shots/processes-en-light.webp" width="1600" height="954" loading="lazy" decoding="async" alt="The processes grouped by app, and the card of one process: who signed it, its explanation and its charts.">
-          <img class="it shot-light" lang="it" src="shots/processes-it-light.webp" width="1600" height="954" loading="lazy" decoding="async" alt="I processi raggruppati per app e la scheda di un processo: chi lo ha firmato, la spiegazione e i grafici.">
+          <a class="en shot-dark" lang="en" href="shots/processes-en-dark.webp"><img src="shots/processes-en-dark.webp" width="1600" height="954" loading="lazy" decoding="async" alt="The processes grouped by app, and the card of one process: who signed it, its explanation and its charts."></a>
+          <a class="it shot-dark" lang="it" href="shots/processes-it-dark.webp"><img src="shots/processes-it-dark.webp" width="1600" height="954" loading="lazy" decoding="async" alt="I processi raggruppati per app e la scheda di un processo: chi lo ha firmato, la spiegazione e i grafici."></a>
+          <a class="en shot-light" lang="en" href="shots/processes-en-light.webp"><img src="shots/processes-en-light.webp" width="1600" height="954" loading="lazy" decoding="async" alt="The processes grouped by app, and the card of one process: who signed it, its explanation and its charts."></a>
+          <a class="it shot-light" lang="it" href="shots/processes-it-light.webp"><img src="shots/processes-it-light.webp" width="1600" height="954" loading="lazy" decoding="async" alt="I processi raggruppati per app e la scheda di un processo: chi lo ha firmato, la spiegazione e i grafici."></a>
           <figcaption><span class="en" lang="en">Processes grouped by app, and the card that says what each one is.</span><span class="it" lang="it">I processi raggruppati per app, e la scheda che dice che cos'è ognuno.</span></figcaption>
         </figure>
       </div>
@@ -427,12 +428,12 @@
         <ul class="plain">
           <li><span class="en" lang="en">macOS 26 or later.</span><span class="it" lang="it">macOS 26 o successivo.</span></li>
           <li><span class="en" lang="en">Interface in English and Italian.</span><span class="it" lang="it">Interfaccia in italiano e in inglese.</span></li>
-          <li><span class="en" lang="en">Free, and always will be.</span><span class="it" lang="it">Gratuita, e lo resterà sempre.</span></li>
+          <li><span class="en" lang="en">Free, including future versions.</span><span class="it" lang="it">Gratuita, anche nelle versioni future.</span></li>
         </ul>
       </div>
       <div>
         <h2><span class="en" lang="en">Your data stays on the Mac</span><span class="it" lang="it">I dati restano sul Mac</span></h2>
-        <p><span class="en" lang="en">No telemetry. What the app measures leaves the Mac only when you click: <em>VirusTotal</em> sends the SHA-256 fingerprint of a program, never the file; <em>Search</em> sends the name of a process to the search engine you chose. Once a day the app asks this site which version is the latest, sending only its name and version; it can be turned off in Settings.</span><span class="it" lang="it">Nessuna telemetria. Ciò che l'app misura esce dal Mac solo con un vostro clic: <em>VirusTotal</em> invia l'impronta SHA-256 di un programma, mai il file; <em>Cerca</em> invia il nome di un processo al motore di ricerca che avete scelto. Una volta al giorno l'app chiede a questo sito qual è l'ultima versione, inviando solo il proprio nome e la versione; si spegne dalle Impostazioni.</span></p>
+        <p><span class="en" lang="en">What the app measures stays on the Mac, and leaves it only when you click: <em>VirusTotal</em> sends only the SHA-256 fingerprint of a program; <em>Search</em> sends the name of a process to the search engine you chose. Once a day the app asks this site which version is the latest, sending only its name and version; it can be turned off in Settings.</span><span class="it" lang="it">Ciò che l'app misura resta sul Mac, ed esce solo con un vostro clic: <em>VirusTotal</em> invia solo l'impronta SHA-256 di un programma; <em>Cerca</em> invia il nome di un processo al motore di ricerca che avete scelto. Una volta al giorno l'app chiede a questo sito qual è l'ultima versione, inviando solo il proprio nome e la versione; si può disattivare nelle Impostazioni.</span></p>
       </div>
     </div>
   </section>
@@ -450,22 +451,24 @@
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">Versions</span><span class="it" lang="it">Versioni</span></p>
       <h2><span class="en" lang="en">Every published version</span><span class="it" lang="it">Tutte le versioni pubblicate</span></h2>
-      <p class="lead"><span class="en" lang="en">A published version never changes: each one keeps its files and checksums, and stays available to download.</span><span class="it" lang="it">Una versione pubblicata non cambia mai: ognuna conserva i propri file e checksum, e resta disponibile per il download.</span></p>
+      <p class="lead"><span class="en" lang="en">Every published version keeps its files and checksums, and stays available to download.</span><span class="it" lang="it">Ogni versione pubblicata conserva i propri file e checksum, e resta disponibile per il download.</span></p>
       <div class="versions" id="versions-list"></div>
     </div>
   </section>
 
-  <section class="section" id="verify">
+  <section class="section" id="verify" hidden>
     <div class="wrap verify-box">
       <div>
         <h2><span class="en" lang="en">Checking a download</span><span class="it" lang="it">Verificare un download</span></h2>
         <p><span class="en" lang="en">Each file has its <code>.sha256</code> next to it, in the list of versions. With both in the same folder, this command checks the file.</span><span class="it" lang="it">Ogni file ha accanto il suo <code>.sha256</code>, nell'elenco delle versioni. Con i due file nella stessa cartella, questo comando verifica il file.</span></p>
         <pre><code>shasum -a 256 -c &lt;file&gt;.sha256</code></pre>
+        <p class="win"><span class="en" lang="en">On Windows, PowerShell shows the checksum, to compare with the one in the <code>.sha256</code> file:</span><span class="it" lang="it">Su Windows, PowerShell mostra il checksum, da confrontare con quello del file <code>.sha256</code>:</span></p>
+        <pre><code>Get-FileHash &lt;file&gt; -Algorithm SHA256</code></pre>
       </div>
       <div>
         <h2><span class="en" lang="en">Updates</span><span class="it" lang="it">Aggiornamenti</span></h2>
         <p><span class="en" lang="en">Once installed, the app finds its updates on this site and verifies each download before installing it. The check sends no information about the user or the computer.</span><span class="it" lang="it">Una volta installata, l'app trova i propri aggiornamenti su questo sito e verifica ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.</span></p>
-        <p style="margin-top: 14px"><a href="../#trust"><span class="en" lang="en">What stands behind each download</span><span class="it" lang="it">Che cosa garantisce ogni download</span></a></p>
+        <p style="margin-top: 14px"><a href="../#trust"><span class="en" lang="en">What each download guarantees</span><span class="it" lang="it">Che cosa garantisce ogni download</span></a></p>
       </div>
     </div>
   </section>
@@ -479,9 +482,10 @@
           <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 14 A36 36 0 1 0 86 50 H66" fill="none" stroke="var(--accent)" stroke-width="13" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--mark-dot)"/></svg>
           <span class="brand-name">G&amp;G Technologies</span>
         </a>
-        <p><span class="en" lang="en">Software, robotics and AI that help businesses grow.</span><span class="it" lang="it">Software, robotica e AI che fanno crescere le imprese.</span></p>
+        <p><span class="en" lang="en">We design and build technology: medical wearables, robotics and artificial intelligence.</span><span class="it" lang="it">Progettiamo e realizziamo tecnologia: wearable medicali, robotica e intelligenza artificiale.</span></p>
       </div>
       <div class="footer-links">
+        <a class="en" lang="en" href="https://ggtechnologies.sm/en/products/">All G&amp;G products</a><a class="it" lang="it" href="https://ggtechnologies.sm/prodotti/">Tutti i prodotti G&amp;G</a>
         <a href="https://ggtechnologies.sm/">ggtechnologies.sm</a>
         <a href="../"><span class="en" lang="en">All apps</span><span class="it" lang="it">Tutte le app</span></a>
         <a href="mailto:info@ggtechnologies.sm">info@ggtechnologies.sm</a>
@@ -576,8 +580,15 @@
     return same[0] || null;
   }
 
-  function meta(asset, extra) {
-    var text = [String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
+  // "macos-universal" -> "Universal"; "windows-x64-portable" -> "x64 · portable"
+  function variant(platform) {
+    var label = platformLabel(platform);
+    var cut = label.indexOf(" · ");
+    return cut < 0 ? "" : label.slice(cut + 3);
+  }
+
+  function meta(asset, extra, first) {
+    var text = [first || "", String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
     var unsigned = systemOf(asset.platform) !== "macos" && asset.signed === false;
     return both(el("span", "dl-meta"),
       text + (unsigned ? " · not code-signed" : "") + (extra ? extra[0] : ""),
@@ -588,8 +599,10 @@
     var link = el("a", primary ? "dl primary" : "dl");
     link.href = asset.url;
     link.innerHTML = ARROW;
-    link.appendChild(el("span", "dl-label", platformLabel(asset.platform)));
-    link.appendChild(meta(asset));
+    // The button says what it does and for which system; the variant goes in the small line.
+    var os = SYSTEMS[systemOf(asset.platform)] || systemOf(asset.platform);
+    link.appendChild(both(el("span", "dl-label"), "Download for " + os, "Download per " + os));
+    link.appendChild(meta(asset, null, variant(asset.platform)));
     return link;
   }
 
@@ -618,7 +631,7 @@
       row.appendChild(el("span", "name", platformLabel(asset.platform)));
       row.appendChild(meta(asset, asset.minimum_os ? [" · macOS " + asset.minimum_os + " or later", " · macOS " + asset.minimum_os + " o successivo"] : null));
       var links = el("span", "links");
-      var get = both(el("a"), "Download", "Scarica");
+      var get = both(el("a"), "Download", "Download");
       get.href = asset.url;
       links.appendChild(get);
       var sum = el("a", "", ".sha256");
@@ -687,6 +700,9 @@
       "Ogni file ha il suo checksum SHA-256 nell'elenco delle versioni più in basso."));
 
     // What's new
+    // Checking a download makes sense once there is one.
+    document.getElementById("verify").hidden = false;
+
     var section = document.getElementById("notes");
     if (latest.notes) {
       both(document.getElementById("notes-title"), "What's new in version " + latest.version, "Le novità della versione " + latest.version);
@@ -755,6 +771,10 @@
     var back = both(el("a", "back"), "The apps already available", "Le app già disponibili");
     back.href = "../";
     panel.appendChild(back);
+    var trust = both(el("a", "back"), "What each download guarantees", "Che cosa garantisce ogni download");
+    trust.href = "../#trust";
+    panel.appendChild(el("br"));
+    panel.appendChild(trust);
     if (/[?&]download(=|&|$)/.test(location.search)) {
       var starting = document.getElementById("starting");
       both(starting, "There is nothing to download yet.", "Non c'è ancora nulla da scaricare.");

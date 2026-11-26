@@ -159,16 +159,16 @@
   .notice { display: none; margin-bottom: 24px; padding: 14px 18px; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--tint); color: var(--muted); font-size: 0.94rem; }
   .notice.show { display: block; }
   .notice a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
   .card { background: linear-gradient(170deg, var(--panel-2), var(--panel) 60%); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.22s, box-shadow 0.22s; }
   .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); opacity: 0; transition: opacity 0.22s; }
   .card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
   .card:hover::before, .card.released::before { opacity: 1; }
-  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
   .card h3 a:hover { color: var(--accent-text); }
   .card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; line-height: 1; padding: 5px 10px 5px 11px; border-radius: 999px; background: var(--gradient); color: var(--btn-text); box-shadow: 0 4px 14px var(--btn-shadow); white-space: nowrap; }
+  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; padding: 4px 11px; border-radius: 999px; background: var(--tint); color: var(--accent-text); white-space: nowrap; }
   .card-free { color: var(--accent-text); font-size: 0.88rem; font-weight: 600; margin-top: 10px; }
   .card-more { margin-top: 12px; font-size: 0.86rem; }
   .card-more a { color: var(--accent-text); font-weight: 600; }
@@ -203,9 +203,10 @@
   .point { border-top: 2px solid var(--accent); padding-top: 18px; }
   .point h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
   .point p { color: var(--muted); font-size: 0.94rem; }
-  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 88px 0; align-items: start; }
+  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-top: 88px; padding-bottom: 88px; align-items: start; }
   .verify h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
   .verify p { color: var(--muted); font-size: 0.98rem; max-width: 34em; }
+  p.win { margin: 18px 0 10px; }
   pre { margin-top: 18px; padding: 16px 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--code-bg); font-family: var(--mono); font-size: 0.86rem; overflow-x: auto; }
 
   /* Footer */
@@ -242,8 +243,7 @@
   .app-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
   .title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 18px; }
   .title-row h1 { margin: 0; }
-  .title-row .free { font-size: 0.82rem; padding: 7px 14px 7px 15px; }
-  .app-free { color: var(--accent-text); font-weight: 600; font-size: 1.02rem; margin-top: 14px; }
+  .title-row .free { font-size: 0.86rem; padding: 7px 15px; }
   .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
   .features li { padding: 22px 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); color: var(--muted); font-size: 0.95rem; position: relative; }
   .features li::before { content: ""; position: absolute; left: 24px; top: 0; width: 36px; height: 2px; background: var(--gradient); }
@@ -262,6 +262,7 @@
   .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
   .shot { margin: 0; }
   .shot:last-child { grid-column: 1 / -1; }
+  .shot a { display: block; cursor: zoom-in; }
   .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
   .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
   .app-note { color: var(--faint); font-size: 0.92rem; margin-top: 14px; max-width: 560px; }
@@ -313,6 +314,7 @@
     .features { gap: 14px; }
     .shots { grid-template-columns: 1fr; }
     .shot-tall { max-width: 380px; }
+    .shot-tall { order: -1; }
   }
 </style>
 </head>
@@ -353,12 +355,11 @@
           <p class="eyebrow"><span class="en" lang="en">Titanium suite</span><span class="it" lang="it">Suite Titanium</span></p>
           <div class="title-row"><h1>Titanium AI</h1></div>
           <p class="hero-sub"><span class="en" lang="en">Local AI on Apple silicon. An inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.</span><span class="it" lang="it">AI locale su Apple silicon. Un runtime di inferenza costruito attorno alla memoria unificata, con un'API compatibile con OpenAI, per eseguire i modelli linguistici sul proprio Mac.</span></p>
-          <p class="app-free" hidden><span class="en" lang="en"></span><span class="it" lang="it"></span></p>
           <p class="app-note" hidden><span class="en" lang="en"></span><span class="it" lang="it"></span></p>
           <ul class="facts" id="facts"><li>macOS · Apple silicon</li></ul>
         </div>
         <aside class="panel" id="download" aria-labelledby="download-title">
-          <h2 id="download-title"><span class="en" lang="en">Download</span><span class="it" lang="it">Scarica</span></h2>
+          <h2 id="download-title"><span class="en" lang="en">Download</span><span class="it" lang="it">Download</span></h2>
           <div id="panel">
             <p class="waiting"><span class="en" lang="en">Reading the latest version…</span><span class="it" lang="it">Lettura dell'ultima versione…</span></p>
             <noscript><p class="waiting"><span class="en" lang="en">This page needs JavaScript to read the latest version. The data is in <a href="latest.json" style="text-decoration: underline">latest.json</a>.</span><span class="it" lang="it">Questa pagina ha bisogno di JavaScript per leggere l'ultima versione. I dati sono in <a href="latest.json" style="text-decoration: underline">latest.json</a>.</span></p></noscript>
@@ -372,13 +373,13 @@
   <section class="section" id="about">
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span></p>
-      <h2><span class="en" lang="en">Language models, on your own Mac.</span><span class="it" lang="it">I modelli linguistici, sul proprio Mac.</span></h2>
+      <h2><span class="en" lang="en">Language models run locally on the Mac</span><span class="it" lang="it">I modelli linguistici eseguiti in locale sul Mac</span></h2>
       <p class="lead"><span class="en" lang="en">Titanium AI is an inference runtime designed for Apple silicon. It is built around unified memory, the memory that the processor and the graphics share, so that a Mac can run larger models and longer conversations locally.</span><span class="it" lang="it">Titanium AI è un runtime di inferenza pensato per Apple silicon. È costruito attorno alla memoria unificata, quella che processore e grafica condividono, perché un Mac possa eseguire in locale modelli più grandi e conversazioni più lunghe.</span></p>
       <ul class="features">
         <li><strong class="en" lang="en">Made for unified memory</strong><strong class="it" lang="it">Fatto per la memoria unificata</strong><span class="en" lang="en">One pool of memory for the model's context, shared by processor and GPU, divided into pages and handed out as it is needed.</span><span class="it" lang="it">Un'unica riserva di memoria per il contesto del modello, condivisa da processore e GPU, divisa in pagine e assegnata quando serve.</span></li>
-        <li><strong class="en" lang="en">Nothing computed twice</strong><strong class="it" lang="it">Niente calcolato due volte</strong><span class="en" lang="en">A prefix cache keeps the beginning that requests have in common, such as the same instructions or the same document, and reuses it.</span><span class="it" lang="it">Una cache dei prefissi conserva l'inizio che le richieste hanno in comune, come le stesse istruzioni o lo stesso documento, e lo riusa.</span></li>
-        <li><strong class="en" lang="en">Beyond the memory, on the SSD</strong><strong class="it" lang="it">Oltre la memoria, sull'SSD</strong><span class="en" lang="en">When memory runs short, the cache can move to the SSD instead of being thrown away.</span><span class="it" lang="it">Quando la memoria scarseggia, la cache può passare sull'SSD invece di essere scartata.</span></li>
-        <li><strong class="en" lang="en">A budget that follows the Mac</strong><strong class="it" lang="it">Un budget che segue il Mac</strong><span class="en" lang="en">The memory the runtime takes adapts to what the Mac has free, so the rest of your work keeps running.</span><span class="it" lang="it">La memoria che il runtime prende si adatta a quella libera sul Mac, così il resto del lavoro continua a girare.</span></li>
+        <li><strong class="en" lang="en">A shared part is computed only once</strong><strong class="it" lang="it">Una parte comune si calcola una volta sola</strong><span class="en" lang="en">A prefix cache keeps the beginning that requests have in common, such as the same instructions or the same document, and reuses it.</span><span class="it" lang="it">Una cache dei prefissi conserva l'inizio che le richieste hanno in comune, come le stesse istruzioni o lo stesso documento, e lo riusa.</span></li>
+        <li><strong class="en" lang="en">A cache that extends to the SSD</strong><strong class="it" lang="it">Una cache che si estende all'SSD</strong><span class="en" lang="en">When memory runs short, the cache can move to the SSD and stay available.</span><span class="it" lang="it">Quando la memoria scarseggia, la cache può passare sull'SSD e restare disponibile.</span></li>
+        <li><strong class="en" lang="en">Memory use that adapts to the Mac</strong><strong class="it" lang="it">Un uso della memoria che si adatta al Mac</strong><span class="en" lang="en">The memory the runtime takes adapts to what the Mac has free, so the rest of your work keeps running.</span><span class="it" lang="it">La memoria che il runtime prende si adatta a quella libera sul Mac, così il resto del lavoro continua a girare.</span></li>
         <li><strong class="en" lang="en">An OpenAI-compatible API</strong><strong class="it" lang="it">Un'API compatibile con OpenAI</strong><span class="en" lang="en">Existing tools and libraries connect to it as they are, over HTTP on the Mac itself, with streamed answers and streamed reasoning.</span><span class="it" lang="it">Strumenti e librerie esistenti vi si collegano così come sono, via HTTP sul Mac stesso, con le risposte e il ragionamento in streaming.</span></li>
         <li><strong class="en" lang="en">Models in GGUF format</strong><strong class="it" lang="it">Modelli in formato GGUF</strong><span class="en" lang="en">It runs the open models published in the GGUF format.</span><span class="it" lang="it">Esegue i modelli aperti pubblicati nel formato GGUF.</span></li>
       </ul>
@@ -395,8 +396,8 @@
         </ul>
       </div>
       <div>
-        <h2><span class="en" lang="en">Local by design</span><span class="it" lang="it">Locale per scelta</span></h2>
-        <p><span class="en" lang="en">The models run on the Mac itself: answering a request needs no cloud service.</span><span class="it" lang="it">I modelli girano sul Mac stesso: per rispondere a una richiesta non serve alcun servizio cloud.</span></p>
+        <h2><span class="en" lang="en">Local execution</span><span class="it" lang="it">Esecuzione in locale</span></h2>
+        <p><span class="en" lang="en">The models run on the Mac itself, which computes the answers to every request.</span><span class="it" lang="it">I modelli girano sul Mac stesso, che calcola le risposte a ogni richiesta.</span></p>
       </div>
     </div>
   </section>
@@ -414,22 +415,24 @@
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">Versions</span><span class="it" lang="it">Versioni</span></p>
       <h2><span class="en" lang="en">Every published version</span><span class="it" lang="it">Tutte le versioni pubblicate</span></h2>
-      <p class="lead"><span class="en" lang="en">A published version never changes: each one keeps its files and checksums, and stays available to download.</span><span class="it" lang="it">Una versione pubblicata non cambia mai: ognuna conserva i propri file e checksum, e resta disponibile per il download.</span></p>
+      <p class="lead"><span class="en" lang="en">Every published version keeps its files and checksums, and stays available to download.</span><span class="it" lang="it">Ogni versione pubblicata conserva i propri file e checksum, e resta disponibile per il download.</span></p>
       <div class="versions" id="versions-list"></div>
     </div>
   </section>
 
-  <section class="section" id="verify">
+  <section class="section" id="verify" hidden>
     <div class="wrap verify-box">
       <div>
         <h2><span class="en" lang="en">Checking a download</span><span class="it" lang="it">Verificare un download</span></h2>
         <p><span class="en" lang="en">Each file has its <code>.sha256</code> next to it, in the list of versions. With both in the same folder, this command checks the file.</span><span class="it" lang="it">Ogni file ha accanto il suo <code>.sha256</code>, nell'elenco delle versioni. Con i due file nella stessa cartella, questo comando verifica il file.</span></p>
         <pre><code>shasum -a 256 -c &lt;file&gt;.sha256</code></pre>
+        <p class="win"><span class="en" lang="en">On Windows, PowerShell shows the checksum, to compare with the one in the <code>.sha256</code> file:</span><span class="it" lang="it">Su Windows, PowerShell mostra il checksum, da confrontare con quello del file <code>.sha256</code>:</span></p>
+        <pre><code>Get-FileHash &lt;file&gt; -Algorithm SHA256</code></pre>
       </div>
       <div>
         <h2><span class="en" lang="en">Updates</span><span class="it" lang="it">Aggiornamenti</span></h2>
         <p><span class="en" lang="en">Once installed, the app finds its updates on this site and verifies each download before installing it. The check sends no information about the user or the computer.</span><span class="it" lang="it">Una volta installata, l'app trova i propri aggiornamenti su questo sito e verifica ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.</span></p>
-        <p style="margin-top: 14px"><a href="../#trust"><span class="en" lang="en">What stands behind each download</span><span class="it" lang="it">Che cosa garantisce ogni download</span></a></p>
+        <p style="margin-top: 14px"><a href="../#trust"><span class="en" lang="en">What each download guarantees</span><span class="it" lang="it">Che cosa garantisce ogni download</span></a></p>
       </div>
     </div>
   </section>
@@ -443,9 +446,10 @@
           <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 14 A36 36 0 1 0 86 50 H66" fill="none" stroke="var(--accent)" stroke-width="13" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--mark-dot)"/></svg>
           <span class="brand-name">G&amp;G Technologies</span>
         </a>
-        <p><span class="en" lang="en">Software, robotics and AI that help businesses grow.</span><span class="it" lang="it">Software, robotica e AI che fanno crescere le imprese.</span></p>
+        <p><span class="en" lang="en">We design and build technology: medical wearables, robotics and artificial intelligence.</span><span class="it" lang="it">Progettiamo e realizziamo tecnologia: wearable medicali, robotica e intelligenza artificiale.</span></p>
       </div>
       <div class="footer-links">
+        <a class="en" lang="en" href="https://ggtechnologies.sm/en/products/">All G&amp;G products</a><a class="it" lang="it" href="https://ggtechnologies.sm/prodotti/">Tutti i prodotti G&amp;G</a>
         <a href="https://ggtechnologies.sm/">ggtechnologies.sm</a>
         <a href="../"><span class="en" lang="en">All apps</span><span class="it" lang="it">Tutte le app</span></a>
         <a href="mailto:info@ggtechnologies.sm">info@ggtechnologies.sm</a>
@@ -540,8 +544,15 @@
     return same[0] || null;
   }
 
-  function meta(asset, extra) {
-    var text = [String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
+  // "macos-universal" -> "Universal"; "windows-x64-portable" -> "x64 · portable"
+  function variant(platform) {
+    var label = platformLabel(platform);
+    var cut = label.indexOf(" · ");
+    return cut < 0 ? "" : label.slice(cut + 3);
+  }
+
+  function meta(asset, extra, first) {
+    var text = [first || "", String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
     var unsigned = systemOf(asset.platform) !== "macos" && asset.signed === false;
     return both(el("span", "dl-meta"),
       text + (unsigned ? " · not code-signed" : "") + (extra ? extra[0] : ""),
@@ -552,8 +563,10 @@
     var link = el("a", primary ? "dl primary" : "dl");
     link.href = asset.url;
     link.innerHTML = ARROW;
-    link.appendChild(el("span", "dl-label", platformLabel(asset.platform)));
-    link.appendChild(meta(asset));
+    // The button says what it does and for which system; the variant goes in the small line.
+    var os = SYSTEMS[systemOf(asset.platform)] || systemOf(asset.platform);
+    link.appendChild(both(el("span", "dl-label"), "Download for " + os, "Download per " + os));
+    link.appendChild(meta(asset, null, variant(asset.platform)));
     return link;
   }
 
@@ -582,7 +595,7 @@
       row.appendChild(el("span", "name", platformLabel(asset.platform)));
       row.appendChild(meta(asset, asset.minimum_os ? [" · macOS " + asset.minimum_os + " or later", " · macOS " + asset.minimum_os + " o successivo"] : null));
       var links = el("span", "links");
-      var get = both(el("a"), "Download", "Scarica");
+      var get = both(el("a"), "Download", "Download");
       get.href = asset.url;
       links.appendChild(get);
       var sum = el("a", "", ".sha256");
@@ -651,6 +664,9 @@
       "Ogni file ha il suo checksum SHA-256 nell'elenco delle versioni più in basso."));
 
     // What's new
+    // Checking a download makes sense once there is one.
+    document.getElementById("verify").hidden = false;
+
     var section = document.getElementById("notes");
     if (latest.notes) {
       both(document.getElementById("notes-title"), "What's new in version " + latest.version, "Le novità della versione " + latest.version);
@@ -719,6 +735,10 @@
     var back = both(el("a", "back"), "The apps already available", "Le app già disponibili");
     back.href = "../";
     panel.appendChild(back);
+    var trust = both(el("a", "back"), "What each download guarantees", "Che cosa garantisce ogni download");
+    trust.href = "../#trust";
+    panel.appendChild(el("br"));
+    panel.appendChild(trust);
     if (/[?&]download(=|&|$)/.test(location.search)) {
       var starting = document.getElementById("starting");
       both(starting, "There is nothing to download yet.", "Non c'è ancora nulla da scaricare.");

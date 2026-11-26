@@ -19,11 +19,12 @@
 
   <rect x="72" y="170" width="36" height="2" rx="1" fill="url(#accent)"/>
   <text x="120" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2.6" fill="#6EE7B7">TITANIUM · DOWNLOADS</text>
-  <g font-family="ui-serif, Georgia, 'Times New Roman', Times, serif" font-size="50" font-weight="700" fill="#EEF1F8" letter-spacing="-0.5">
-    <text x="72" y="244">Every Titanium app,</text>
-    <text x="72" y="304">signed and ready to <tspan fill="url(#accent)">download</tspan>.</text>
+  <g font-family="ui-serif, Georgia, 'Times New Roman', Times, serif" font-size="42" font-weight="700" fill="#EEF1F8" letter-spacing="-0.5">
+    <text x="72" y="232">The Titanium apps work</text>
+    <text x="72" y="282">on your computer and</text>
+    <text x="72" y="332"><tspan fill="url(#accent)">verify</tspan> every update.</text>
   </g>
-  <text x="72" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#AAB3C9">The suite of apps by G&amp;G Technologies, and the feed that keeps them up to date.</text>
+  <text x="72" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#AAB3C9">The suite of apps by G&amp;G Technologies, and the site they update from.</text>
 
   <!-- The orbit of the company site: the mark in the middle, the four apps around it. -->
   <g fill="none" stroke="#FFFFFF" stroke-opacity="0.10">
@@ -36,9 +37,9 @@
   </g>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#EEF1F8">
     <g transform="translate(1060 60)"><rect x="-42" y="-19" width="84" height="38" rx="19" fill="#172136" stroke="#FFFFFF" stroke-opacity="0.17"/><circle cx="-22" cy="0" r="4" fill="#34D399"/><text x="8" y="5" text-anchor="middle">AI</text></g>
-    <g transform="translate(1188 210)"><rect x="-58" y="-19" width="116" height="38" rx="19" fill="#172136" stroke="#FFFFFF" stroke-opacity="0.17"/><circle cx="-38" cy="0" r="4" fill="#38BDF8"/><text x="8" y="5" text-anchor="middle">Fences</text></g>
+    <g transform="translate(1188 210)"><rect x="-58" y="-19" width="116" height="38" rx="19" fill="#172136" stroke="#FFFFFF" stroke-opacity="0.17"/><circle cx="-38" cy="0" r="4" fill="#34D399"/><text x="8" y="5" text-anchor="middle">Fences</text></g>
     <g transform="translate(1060 360)"><rect x="-62" y="-19" width="124" height="38" rx="19" fill="#172136" stroke="#FFFFFF" stroke-opacity="0.17"/><circle cx="-42" cy="0" r="4" fill="#34D399"/><text x="8" y="5" text-anchor="middle">Monitor</text></g>
-    <g transform="translate(932 210)"><rect x="-58" y="-19" width="116" height="38" rx="19" fill="#172136" stroke="#FFFFFF" stroke-opacity="0.17"/><circle cx="-38" cy="0" r="4" fill="#22C3A6"/><text x="8" y="5" text-anchor="middle">Profiles</text></g>
+    <g transform="translate(932 210)"><rect x="-58" y="-19" width="116" height="38" rx="19" fill="#172136" stroke="#FFFFFF" stroke-opacity="0.17"/><circle cx="-38" cy="0" r="4" fill="#34D399"/><text x="8" y="5" text-anchor="middle">Profiles</text></g>
   </g>
 </g>
 <rect x="0.5" y="0.5" width="1279" height="419" rx="27.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>

@@ -15,8 +15,8 @@ This file is written for language models and agents. It says what the suite is, 
 ## The apps
 
 - [Titanium AI](https://ggtechnologies.sm/gg-releases/titanium-ai/) — id `titanium-ai` — macOS, Apple silicon. Local AI on Apple silicon: an inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.
-- [Titanium Fences](https://ggtechnologies.sm/gg-releases/titanium-fences/) — id `titanium-fences` — macOS. Control over what AI applications connect to: it allows only the destinations the user has authorized, blocks the others and records every decision (metadata only, never the content).
-- [Titanium Monitor](https://ggtechnologies.sm/gg-releases/titanium-monitor/) — id `titanium-monitor` — macOS. A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, lets the user inspect, quit or suspend a process, and frees the space taken by caches and leftovers, always through the Trash. Free, and always will be.
+- [Titanium Fences](https://ggtechnologies.sm/gg-releases/titanium-fences/) — id `titanium-fences` — macOS. Control over what AI applications connect to: it allows only the destinations the user has authorized, blocks the others and records every decision, keeping metadata only.
+- [Titanium Monitor](https://ggtechnologies.sm/gg-releases/titanium-monitor/) — id `titanium-monitor` — macOS. A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, lets the user inspect, quit or suspend a process, and frees the space taken by caches and leftovers, always through the Trash. Free, including future versions.
 - [Titanium Profiles](https://ggtechnologies.sm/gg-releases/titanium-profiles/) — id `titanium-profiles` — macOS and Windows. Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one. It is an unofficial tool, not affiliated with Anthropic; it never modifies Claude Desktop and never reads credentials.
 
 Podz.AI is a different product of the same company and is not part of this suite: its site is https://ggtechnologies.sm/digisense-releases/.
@@ -54,7 +54,7 @@ Download addresses always start with `https://github.com/G-G-Technologies-Srl/gg
 - **Can a published file change?** No. A published release is never replaced; a correction always comes out as a new, higher version.
 - **How do the apps update?** They read their own `latest.json` on this site and verify each download (checksum, and on macOS signature and notarization) before installing it. The check sends no information about the user or the computer.
 - **Does the site track visitors?** No. It uses no cookies and no trackers, and loads nothing from other sites.
-- **Price**: Titanium Monitor is free, and always will be. For the other apps the price is not stated on this site: do not infer it; refer to info@ggtechnologies.sm.
+- **Price**: Titanium Monitor is free, including its future versions. For the other apps the price is not stated on this site: do not infer it; refer to info@ggtechnologies.sm.
 - **Licence, support, system requirements beyond `minimum_os` and the page of each app**: they are not stated on this site. Do not infer them; refer to info@ggtechnologies.sm.
 
 ## Italiano
@@ -63,7 +63,7 @@ Download addresses always start with `https://github.com/G-G-Technologies-Srl/gg
 - **Quali versioni esistono**: si leggono da `index.json` e da `<id>/latest.json`, non da questo file. Un'app che manca da `index.json`, o il cui `latest.json` risponde 404, non è ancora stata rilasciata.
 - **Dove si scarica**: dalla pagina dell'app, `https://ggtechnologies.sm/gg-releases/<id>/?lang=it`, che propone per primo il file per il sistema di chi visita (con `&download=macos` o `&download=windows` il download parte da solo), oppure dall'indirizzo `url` del file per il proprio sistema in `latest.json`. Gli indirizzi ufficiali iniziano sempre con `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`.
 - **Verifica**: i file per macOS sono firmati con l'Apple Developer ID di G&G Technologies e notarizzati da Apple. Ogni file ha il suo checksum SHA-256; si controlla con `shasum -a 256 -c <file>.sha256`.
-- **Una release non cambia mai**: una correzione esce sempre come nuova versione.
+- **Ogni versione resta com'è stata pubblicata**: una correzione esce sempre come nuova versione.
 - **Aggiornamenti**: le app leggono il proprio `latest.json` e verificano ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.
-- **Prezzo**: Titanium Monitor è gratuita, e lo resterà sempre. Per le altre app il prezzo non è indicato su questo sito: per saperlo, info@ggtechnologies.sm.
+- **Prezzo**: Titanium Monitor è gratuita, anche nelle versioni future. Per le altre app il prezzo non è indicato su questo sito: per saperlo, info@ggtechnologies.sm.
 - **Licenza, assistenza**: non sono indicate su questo sito. Per saperle: info@ggtechnologies.sm.

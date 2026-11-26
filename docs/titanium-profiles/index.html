@@ -159,16 +159,16 @@
   .notice { display: none; margin-bottom: 24px; padding: 14px 18px; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--tint); color: var(--muted); font-size: 0.94rem; }
   .notice.show { display: block; }
   .notice a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
   .card { background: linear-gradient(170deg, var(--panel-2), var(--panel) 60%); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.22s, box-shadow 0.22s; }
   .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); opacity: 0; transition: opacity 0.22s; }
   .card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
   .card:hover::before, .card.released::before { opacity: 1; }
-  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
   .card h3 a:hover { color: var(--accent-text); }
   .card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; line-height: 1; padding: 5px 10px 5px 11px; border-radius: 999px; background: var(--gradient); color: var(--btn-text); box-shadow: 0 4px 14px var(--btn-shadow); white-space: nowrap; }
+  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; padding: 4px 11px; border-radius: 999px; background: var(--tint); color: var(--accent-text); white-space: nowrap; }
   .card-free { color: var(--accent-text); font-size: 0.88rem; font-weight: 600; margin-top: 10px; }
   .card-more { margin-top: 12px; font-size: 0.86rem; }
   .card-more a { color: var(--accent-text); font-weight: 600; }
@@ -203,9 +203,10 @@
   .point { border-top: 2px solid var(--accent); padding-top: 18px; }
   .point h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
   .point p { color: var(--muted); font-size: 0.94rem; }
-  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 88px 0; align-items: start; }
+  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-top: 88px; padding-bottom: 88px; align-items: start; }
   .verify h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
   .verify p { color: var(--muted); font-size: 0.98rem; max-width: 34em; }
+  p.win { margin: 18px 0 10px; }
   pre { margin-top: 18px; padding: 16px 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--code-bg); font-family: var(--mono); font-size: 0.86rem; overflow-x: auto; }
 
   /* Footer */
@@ -242,8 +243,7 @@
   .app-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
   .title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 18px; }
   .title-row h1 { margin: 0; }
-  .title-row .free { font-size: 0.82rem; padding: 7px 14px 7px 15px; }
-  .app-free { color: var(--accent-text); font-weight: 600; font-size: 1.02rem; margin-top: 14px; }
+  .title-row .free { font-size: 0.86rem; padding: 7px 15px; }
   .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
   .features li { padding: 22px 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); color: var(--muted); font-size: 0.95rem; position: relative; }
   .features li::before { content: ""; position: absolute; left: 24px; top: 0; width: 36px; height: 2px; background: var(--gradient); }
@@ -262,6 +262,7 @@
   .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
   .shot { margin: 0; }
   .shot:last-child { grid-column: 1 / -1; }
+  .shot a { display: block; cursor: zoom-in; }
   .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
   .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
   .app-note { color: var(--faint); font-size: 0.92rem; margin-top: 14px; max-width: 560px; }
@@ -313,6 +314,7 @@
     .features { gap: 14px; }
     .shots { grid-template-columns: 1fr; }
     .shot-tall { max-width: 380px; }
+    .shot-tall { order: -1; }
   }
 </style>
 </head>
@@ -353,12 +355,11 @@
           <p class="eyebrow"><span class="en" lang="en">Titanium suite</span><span class="it" lang="it">Suite Titanium</span></p>
           <div class="title-row"><h1>Titanium Profiles</h1></div>
           <p class="hero-sub"><span class="en" lang="en">Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.</span><span class="it" lang="it">Più account Claude Desktop affiancati sullo stesso computer, per esempio uno aziendale e uno personale.</span></p>
-          <p class="app-free" hidden><span class="en" lang="en"></span><span class="it" lang="it"></span></p>
           <p class="app-note"><span class="en" lang="en">An unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.</span><span class="it" lang="it">Uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali.</span></p>
           <ul class="facts" id="facts"><li>macOS</li><li>Windows</li></ul>
         </div>
         <aside class="panel" id="download" aria-labelledby="download-title">
-          <h2 id="download-title"><span class="en" lang="en">Download</span><span class="it" lang="it">Scarica</span></h2>
+          <h2 id="download-title"><span class="en" lang="en">Download</span><span class="it" lang="it">Download</span></h2>
           <div id="panel">
             <p class="waiting"><span class="en" lang="en">Reading the latest version…</span><span class="it" lang="it">Lettura dell'ultima versione…</span></p>
             <noscript><p class="waiting"><span class="en" lang="en">This page needs JavaScript to read the latest version. The data is in <a href="latest.json" style="text-decoration: underline">latest.json</a>.</span><span class="it" lang="it">Questa pagina ha bisogno di JavaScript per leggere l'ultima versione. I dati sono in <a href="latest.json" style="text-decoration: underline">latest.json</a>.</span></p></noscript>
@@ -372,16 +373,16 @@
   <section class="section" id="about">
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span></p>
-      <h2><span class="en" lang="en">Two Claude accounts, one computer.</span><span class="it" lang="it">Due account Claude, un computer.</span></h2>
+      <h2><span class="en" lang="en">Several Claude Desktop accounts on the same computer</span><span class="it" lang="it">Più account di Claude Desktop sullo stesso computer</span></h2>
       <p class="lead"><span class="en" lang="en">Claude Desktop allows one login at a time. Titanium Profiles gives every profile its own data folder and starts a separate Claude Desktop for each, with its own login: a company account and a personal one stay open side by side.</span><span class="it" lang="it">Claude Desktop consente un solo accesso alla volta. Titanium Profiles dà a ogni profilo la propria cartella di dati e avvia per ognuno un Claude Desktop separato, con il proprio accesso: un account aziendale e uno personale restano aperti affiancati.</span></p>
       <ul class="features">
-        <li><strong class="en" lang="en">Start from the login you have</strong><strong class="it" lang="it">Si parte dall'accesso che c'è</strong><span class="en" lang="en">One profile can use the Claude Desktop already on the computer, as it is: nothing is copied or changed.</span><span class="it" lang="it">Un profilo può usare il Claude Desktop già presente sul computer, così com'è: nulla viene copiato o modificato.</span></li>
-        <li><strong class="en" lang="en">Never twice on the same data</strong><strong class="it" lang="it">Mai due volte sugli stessi dati</strong><span class="en" lang="en">Before every start it checks what is running, and never opens a profile twice, which could damage its data.</span><span class="it" lang="it">Prima di ogni avvio controlla che cosa è in esecuzione, e non apre mai due volte lo stesso profilo, cosa che ne potrebbe rovinare i dati.</span></li>
-        <li><strong class="en" lang="en">Claude Code, kept apart too</strong><strong class="it" lang="it">Anche Claude Code, separato</strong><span class="en" lang="en">A profile can have its own Claude Code folder, so the sessions started from it keep their own settings and history.</span><span class="it" lang="it">Un profilo può avere la propria cartella di Claude Code, così le sessioni avviate da lì tengono impostazioni e cronologia proprie.</span></li>
-        <li><strong class="en" lang="en">Every profile at a glance</strong><strong class="it" lang="it">Ogni profilo a colpo d'occhio</strong><span class="en" lang="en">A dashboard with the live state of each profile; start, bring to the front, close or restart; a global shortcut per profile and a menu in the menu bar or the tray.</span><span class="it" lang="it">Una dashboard con lo stato di ogni profilo in tempo reale; avvio, primo piano, chiusura o riavvio; una scorciatoia globale per profilo e un menu nella barra dei menu o nell'area di notifica.</span></li>
-        <li><strong class="en" lang="en">MCP servers, copied with care</strong><strong class="it" lang="it">Server MCP, copiati con cura</strong><span class="en" lang="en">Copy the MCP servers of one profile into another: it shows what will be copied, hides secrets and keeps a backup.</span><span class="it" lang="it">Copia i server MCP di un profilo in un altro: mostra che cosa verrà copiato, nasconde i segreti e tiene una copia di sicurezza.</span></li>
-        <li><strong class="en" lang="en">Usage, logs and diagnostics</strong><strong class="it" lang="it">Consumi, log e diagnostica</strong><span class="en" lang="en">Claude Code usage of today and of the week per profile, the logs as they are written, and a diagnostics report to copy for support.</span><span class="it" lang="it">I consumi di Claude Code di oggi e della settimana per profilo, i log mentre vengono scritti e un rapporto di diagnostica da copiare per l'assistenza.</span></li>
-        <li><strong class="en" lang="en">Usable without a mouse</strong><strong class="it" lang="it">Si usa anche senza mouse</strong><span class="en" lang="en">Everything works from the keyboard and with a screen reader; light and dark themes meet WCAG AA contrast.</span><span class="it" lang="it">Tutto funziona da tastiera e con un lettore di schermo; i temi chiaro e scuro rispettano il contrasto WCAG AA.</span></li>
+        <li><strong class="en" lang="en">A profile for the existing login</strong><strong class="it" lang="it">Un profilo per l'accesso già presente</strong><span class="en" lang="en">One profile can use the Claude Desktop already on the computer, which stays exactly as it is.</span><span class="it" lang="it">Un profilo può usare il Claude Desktop già presente sul computer, che resta esattamente com'è.</span></li>
+        <li><strong class="en" lang="en">One instance per profile at a time</strong><strong class="it" lang="it">Un'istanza alla volta per ogni profilo</strong><span class="en" lang="en">Before every start it checks what is running and opens each profile in a single instance, to keep its data safe.</span><span class="it" lang="it">Prima di ogni avvio controlla che cosa è in esecuzione e apre ogni profilo in una sola istanza, per proteggerne i dati.</span></li>
+        <li><strong class="en" lang="en">A Claude Code folder for each profile</strong><strong class="it" lang="it">Una cartella di Claude Code per ogni profilo</strong><span class="en" lang="en">A profile can have its own Claude Code folder, so the sessions started from it keep their own settings and history.</span><span class="it" lang="it">Un profilo può avere la propria cartella di Claude Code, così le sessioni avviate da lì tengono impostazioni e cronologia proprie.</span></li>
+        <li><strong class="en" lang="en">One dashboard for all profiles</strong><strong class="it" lang="it">Una dashboard per tutti i profili</strong><span class="en" lang="en">A dashboard with the live state of each profile; start, bring to the front, close or restart; a global shortcut per profile and a menu in the menu bar or the tray.</span><span class="it" lang="it">Una dashboard con lo stato di ogni profilo in tempo reale; avvio, primo piano, chiusura o riavvio; una scorciatoia globale per profilo e un menu nella barra dei menu o nell'area di notifica.</span></li>
+        <li><strong class="en" lang="en">Copying MCP servers between profiles</strong><strong class="it" lang="it">La copia dei server MCP fra profili</strong><span class="en" lang="en">The app copies the MCP servers of one profile into another: it shows what will be copied, hides secrets and keeps a backup.</span><span class="it" lang="it">L'app copia i server MCP di un profilo in un altro: mostra che cosa verrà copiato, nasconde i segreti e tiene una copia di sicurezza.</span></li>
+        <li><strong class="en" lang="en">Usage, logs and diagnostics</strong><strong class="it" lang="it">Consumi, log e diagnostica</strong><span class="en" lang="en">Claude Code usage per profile, for today and for the week, the logs as they are written, and a diagnostics report to copy for support.</span><span class="it" lang="it">I consumi di Claude Code di oggi e della settimana per profilo, i log mentre vengono scritti e un rapporto di diagnostica da copiare per l'assistenza.</span></li>
+        <li><strong class="en" lang="en">Keyboard and screen reader use</strong><strong class="it" lang="it">L'uso da tastiera e con un lettore di schermo</strong><span class="en" lang="en">Everything works from the keyboard and with a screen reader; light and dark themes meet WCAG AA contrast.</span><span class="it" lang="it">Tutto funziona da tastiera e con un lettore di schermo; i temi chiaro e scuro rispettano il contrasto WCAG AA.</span></li>
       </ul>
     </div>
   </section>
@@ -391,13 +392,18 @@
       <div>
         <h2><span class="en" lang="en">Requirements</span><span class="it" lang="it">Requisiti</span></h2>
         <ul class="plain">
-          <li><span class="en" lang="en">macOS or Windows 10 and 11.</span><span class="it" lang="it">macOS oppure Windows 10 e 11.</span></li>
+          <li><span class="en" lang="en">macOS, or Windows 10 or 11.</span><span class="it" lang="it">macOS, oppure Windows 10 o 11.</span></li>
           <li><span class="en" lang="en">Claude Desktop installed.</span><span class="it" lang="it">Claude Desktop installato.</span></li>
         </ul>
       </div>
       <div>
-        <h2><span class="en" lang="en">Unofficial, and careful</span><span class="it" lang="it">Non ufficiale, e prudente</span></h2>
-        <p><span class="en" lang="en">An unofficial tool, not affiliated with Anthropic. It never modifies, copies or patches Claude Desktop, never reads cookies, session tokens or credentials, and sends nothing anywhere, except a daily question to this site about the latest version, with only its name and version; it can be turned off.</span><span class="it" lang="it">Uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica, non copia e non altera mai Claude Desktop, non legge mai cookie, token di sessione o credenziali, e non invia nulla a nessuno, tranne una domanda al giorno a questo sito sull'ultima versione, con solo il proprio nome e la versione; si può spegnere.</span></p>
+        <h2><span class="en" lang="en">An unofficial tool</span><span class="it" lang="it">Uno strumento non ufficiale</span></h2>
+        <ul class="plain">
+          <li><span class="en" lang="en">Unofficial tool, not affiliated with Anthropic.</span><span class="it" lang="it">Strumento non ufficiale, non affiliato ad Anthropic.</span></li>
+          <li><span class="en" lang="en">Claude Desktop stays as it is: the app does not modify, copy or patch it.</span><span class="it" lang="it">Claude Desktop resta com'è: l'app non lo modifica, non lo copia e non lo altera.</span></li>
+          <li><span class="en" lang="en">It does not read cookies, session tokens or credentials.</span><span class="it" lang="it">Non legge cookie, token di sessione o credenziali.</span></li>
+          <li><span class="en" lang="en">Its only request is a daily question to this site about the latest version, with only the app's name and version; it can be turned off.</span><span class="it" lang="it">L'unico invio è una domanda al giorno a questo sito sull'ultima versione, con il solo nome e la versione dell'app; si può disattivare.</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -415,22 +421,24 @@
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">Versions</span><span class="it" lang="it">Versioni</span></p>
       <h2><span class="en" lang="en">Every published version</span><span class="it" lang="it">Tutte le versioni pubblicate</span></h2>
-      <p class="lead"><span class="en" lang="en">A published version never changes: each one keeps its files and checksums, and stays available to download.</span><span class="it" lang="it">Una versione pubblicata non cambia mai: ognuna conserva i propri file e checksum, e resta disponibile per il download.</span></p>
+      <p class="lead"><span class="en" lang="en">Every published version keeps its files and checksums, and stays available to download.</span><span class="it" lang="it">Ogni versione pubblicata conserva i propri file e checksum, e resta disponibile per il download.</span></p>
       <div class="versions" id="versions-list"></div>
     </div>
   </section>
 
-  <section class="section" id="verify">
+  <section class="section" id="verify" hidden>
     <div class="wrap verify-box">
       <div>
         <h2><span class="en" lang="en">Checking a download</span><span class="it" lang="it">Verificare un download</span></h2>
         <p><span class="en" lang="en">Each file has its <code>.sha256</code> next to it, in the list of versions. With both in the same folder, this command checks the file.</span><span class="it" lang="it">Ogni file ha accanto il suo <code>.sha256</code>, nell'elenco delle versioni. Con i due file nella stessa cartella, questo comando verifica il file.</span></p>
         <pre><code>shasum -a 256 -c &lt;file&gt;.sha256</code></pre>
+        <p class="win"><span class="en" lang="en">On Windows, PowerShell shows the checksum, to compare with the one in the <code>.sha256</code> file:</span><span class="it" lang="it">Su Windows, PowerShell mostra il checksum, da confrontare con quello del file <code>.sha256</code>:</span></p>
+        <pre><code>Get-FileHash &lt;file&gt; -Algorithm SHA256</code></pre>
       </div>
       <div>
         <h2><span class="en" lang="en">Updates</span><span class="it" lang="it">Aggiornamenti</span></h2>
         <p><span class="en" lang="en">Once installed, the app finds its updates on this site and verifies each download before installing it. The check sends no information about the user or the computer.</span><span class="it" lang="it">Una volta installata, l'app trova i propri aggiornamenti su questo sito e verifica ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.</span></p>
-        <p style="margin-top: 14px"><a href="../#trust"><span class="en" lang="en">What stands behind each download</span><span class="it" lang="it">Che cosa garantisce ogni download</span></a></p>
+        <p style="margin-top: 14px"><a href="../#trust"><span class="en" lang="en">What each download guarantees</span><span class="it" lang="it">Che cosa garantisce ogni download</span></a></p>
       </div>
     </div>
   </section>
@@ -444,9 +452,10 @@
           <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 14 A36 36 0 1 0 86 50 H66" fill="none" stroke="var(--accent)" stroke-width="13" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--mark-dot)"/></svg>
           <span class="brand-name">G&amp;G Technologies</span>
         </a>
-        <p><span class="en" lang="en">Software, robotics and AI that help businesses grow.</span><span class="it" lang="it">Software, robotica e AI che fanno crescere le imprese.</span></p>
+        <p><span class="en" lang="en">We design and build technology: medical wearables, robotics and artificial intelligence.</span><span class="it" lang="it">Progettiamo e realizziamo tecnologia: wearable medicali, robotica e intelligenza artificiale.</span></p>
       </div>
       <div class="footer-links">
+        <a class="en" lang="en" href="https://ggtechnologies.sm/en/products/">All G&amp;G products</a><a class="it" lang="it" href="https://ggtechnologies.sm/prodotti/">Tutti i prodotti G&amp;G</a>
         <a href="https://ggtechnologies.sm/">ggtechnologies.sm</a>
         <a href="../"><span class="en" lang="en">All apps</span><span class="it" lang="it">Tutte le app</span></a>
         <a href="mailto:info@ggtechnologies.sm">info@ggtechnologies.sm</a>
@@ -541,8 +550,15 @@
     return same[0] || null;
   }
 
-  function meta(asset, extra) {
-    var text = [String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
+  // "macos-universal" -> "Universal"; "windows-x64-portable" -> "x64 · portable"
+  function variant(platform) {
+    var label = platformLabel(platform);
+    var cut = label.indexOf(" · ");
+    return cut < 0 ? "" : label.slice(cut + 3);
+  }
+
+  function meta(asset, extra, first) {
+    var text = [first || "", String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
     var unsigned = systemOf(asset.platform) !== "macos" && asset.signed === false;
     return both(el("span", "dl-meta"),
       text + (unsigned ? " · not code-signed" : "") + (extra ? extra[0] : ""),
@@ -553,8 +569,10 @@
     var link = el("a", primary ? "dl primary" : "dl");
     link.href = asset.url;
     link.innerHTML = ARROW;
-    link.appendChild(el("span", "dl-label", platformLabel(asset.platform)));
-    link.appendChild(meta(asset));
+    // The button says what it does and for which system; the variant goes in the small line.
+    var os = SYSTEMS[systemOf(asset.platform)] || systemOf(asset.platform);
+    link.appendChild(both(el("span", "dl-label"), "Download for " + os, "Download per " + os));
+    link.appendChild(meta(asset, null, variant(asset.platform)));
     return link;
   }
 
@@ -583,7 +601,7 @@
       row.appendChild(el("span", "name", platformLabel(asset.platform)));
       row.appendChild(meta(asset, asset.minimum_os ? [" · macOS " + asset.minimum_os + " or later", " · macOS " + asset.minimum_os + " o successivo"] : null));
       var links = el("span", "links");
-      var get = both(el("a"), "Download", "Scarica");
+      var get = both(el("a"), "Download", "Download");
       get.href = asset.url;
       links.appendChild(get);
       var sum = el("a", "", ".sha256");
@@ -652,6 +670,9 @@
       "Ogni file ha il suo checksum SHA-256 nell'elenco delle versioni più in basso."));
 
     // What's new
+    // Checking a download makes sense once there is one.
+    document.getElementById("verify").hidden = false;
+
     var section = document.getElementById("notes");
     if (latest.notes) {
       both(document.getElementById("notes-title"), "What's new in version " + latest.version, "Le novità della versione " + latest.version);
@@ -720,6 +741,10 @@
     var back = both(el("a", "back"), "The apps already available", "Le app già disponibili");
     back.href = "../";
     panel.appendChild(back);
+    var trust = both(el("a", "back"), "What each download guarantees", "Che cosa garantisce ogni download");
+    trust.href = "../#trust";
+    panel.appendChild(el("br"));
+    panel.appendChild(trust);
     if (/[?&]download(=|&|$)/.test(location.search)) {
       var starting = document.getElementById("starting");
       both(starting, "There is nothing to download yet.", "Non c'è ancora nulla da scaricare.");

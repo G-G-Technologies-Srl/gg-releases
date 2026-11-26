@@ -21,7 +21,7 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Titanium downloads, by G&amp;G Technologies: every Titanium app, signed and ready to download.">
+<meta property="og:image:alt" content="Titanium downloads, by G&amp;G Technologies: the Titanium apps work on your computer and verify every update.">
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
@@ -80,7 +80,7 @@
           "@id": "https://ggtechnologies.sm/gg-releases/titanium-fences/#app",
           "name": "Titanium Fences",
           "url": "https://ggtechnologies.sm/gg-releases/titanium-fences/",
-          "description": "Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision: metadata only, never the content.",
+          "description": "Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.",
           "operatingSystem": "macOS",
           "applicationCategory": "SecurityApplication",
           "installUrl": "https://ggtechnologies.sm/gg-releases/titanium-fences/",
@@ -100,7 +100,7 @@
           "applicationCategory": "UtilitiesApplication",
           "installUrl": "https://ggtechnologies.sm/gg-releases/titanium-monitor/",
           "isAccessibleForFree": true,
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Free, and always will be." },
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Free, including future versions." },
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -232,16 +232,16 @@
   .notice { display: none; margin-bottom: 24px; padding: 14px 18px; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--tint); color: var(--muted); font-size: 0.94rem; }
   .notice.show { display: block; }
   .notice a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
   .card { background: linear-gradient(170deg, var(--panel-2), var(--panel) 60%); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.22s, box-shadow 0.22s; }
   .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); opacity: 0; transition: opacity 0.22s; }
   .card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
   .card:hover::before, .card.released::before { opacity: 1; }
-  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+  .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
   .card h3 a:hover { color: var(--accent-text); }
   .card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; line-height: 1; padding: 5px 10px 5px 11px; border-radius: 999px; background: var(--gradient); color: var(--btn-text); box-shadow: 0 4px 14px var(--btn-shadow); white-space: nowrap; }
+  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; line-height: 1; padding: 4px 11px; border-radius: 999px; background: var(--tint); color: var(--accent-text); white-space: nowrap; }
   .card-free { color: var(--accent-text); font-size: 0.88rem; font-weight: 600; margin-top: 10px; }
   .card-more { margin-top: 12px; font-size: 0.86rem; }
   .card-more a { color: var(--accent-text); font-weight: 600; }
@@ -276,9 +276,10 @@
   .point { border-top: 2px solid var(--accent); padding-top: 18px; }
   .point h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
   .point p { color: var(--muted); font-size: 0.94rem; }
-  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 88px 0; align-items: start; }
+  .verify { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-top: 88px; padding-bottom: 88px; align-items: start; }
   .verify h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
   .verify p { color: var(--muted); font-size: 0.98rem; max-width: 34em; }
+  p.win { margin: 18px 0 10px; }
   pre { margin-top: 18px; padding: 16px 18px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--code-bg); font-family: var(--mono); font-size: 0.86rem; overflow-x: auto; }
 
   /* Footer */
@@ -323,6 +324,7 @@
     <div class="nav-links">
       <a href="#apps"><span class="en" lang="en">Apps</span><span class="it" lang="it">App</span></a>
       <a href="#trust"><span class="en" lang="en">Verification</span><span class="it" lang="it">Verifica</span></a>
+      <a class="en" lang="en" href="https://ggtechnologies.sm/en/products/">All G&amp;G products</a><a class="it" lang="it" href="https://ggtechnologies.sm/prodotti/">Tutti i prodotti G&amp;G</a>
       <div class="lang-switch" role="group" aria-label="Lingua · Language">
         <button type="button" data-lang="it" aria-pressed="false">IT</button>
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -340,7 +342,7 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">Titanium · Downloads</span><span class="it" lang="it">Titanium · Download</span></p>
-      <h1><span class="en" lang="en">Every Titanium app, signed and ready to <em>download</em>.</span><span class="it" lang="it">Ogni app Titanium, firmata e pronta da <em>scaricare</em>.</span></h1>
+      <h1><span class="en" lang="en">The Titanium apps work on your computer and <em>verify</em> every update.</span><span class="it" lang="it">Le app Titanium lavorano sul vostro computer e <em>verificano</em> ogni aggiornamento.</span></h1>
       <p class="hero-sub">
         <span class="en" lang="en">Titanium is the suite of apps by G&amp;G Technologies. This page lists the latest release of each app, and it is where the installed apps find their updates.</span>
         <span class="it" lang="it">Titanium è la suite di app di G&amp;G Technologies. Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.</span>
@@ -360,14 +362,14 @@
         </article>
         <article class="card" id="titanium-fences" data-app="titanium-fences">
           <div class="card-head"><div class="card-title"><h3><a href="titanium-fences/">Titanium Fences</a></h3></div><span class="pill" hidden></span></div>
-          <p class="card-text"><span class="en" lang="en">Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision: metadata only, never the content.</span><span class="it" lang="it">Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione: solo i metadati, mai il contenuto.</span></p>
+          <p class="card-text"><span class="en" lang="en">Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.</span><span class="it" lang="it">Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione, tenendo solo i metadati.</span></p>
           <p class="card-more"><a href="titanium-fences/"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span> <span aria-hidden="true">→</span></a></p>
           <div class="card-body"><ul class="systems"><li>macOS</li></ul></div>
         </article>
         <article class="card" id="titanium-monitor" data-app="titanium-monitor">
-          <div class="card-head"><div class="card-title"><h3><a href="titanium-monitor/">Titanium Monitor</a></h3><span class="free" title="Free, and always will be · Gratuita, e lo resterà sempre">FREE</span></div><span class="pill" hidden></span></div>
+          <div class="card-head"><div class="card-title"><h3><a href="titanium-monitor/">Titanium Monitor</a></h3><span class="free"><span class="en" lang="en">Free</span><span class="it" lang="it">Gratuita</span></span></div><span class="pill" hidden></span></div>
           <p class="card-text"><span class="en" lang="en">A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.</span><span class="it" lang="it">Un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.</span></p>
-          <p class="card-free"><span class="en" lang="en">Free, and always will be.</span><span class="it" lang="it">Gratuita, e lo resterà sempre.</span></p>
+          <p class="card-free"><span class="en" lang="en">Free, including future versions.</span><span class="it" lang="it">Gratuita, anche nelle versioni future.</span></p>
           <p class="card-more"><a href="titanium-monitor/"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span> <span aria-hidden="true">→</span></a></p>
           <div class="card-body"><ul class="systems"><li>macOS</li></ul></div>
         </article>
@@ -386,14 +388,14 @@
   <section class="trust" id="trust">
     <div class="wrap">
       <p class="eyebrow"><span class="en" lang="en">Verification</span><span class="it" lang="it">Verifica</span></p>
-      <h2><span class="en" lang="en">What stands behind each download.</span><span class="it" lang="it">Che cosa garantisce ogni download.</span></h2>
+      <h2><span class="en" lang="en">What each download guarantees</span><span class="it" lang="it">Che cosa garantisce ogni download</span></h2>
       <p class="section-intro">
-        <span class="en" lang="en">A download is worth installing only if it can be checked. These three rules hold for every file on this page.</span>
-        <span class="it" lang="it">Un download merita di essere installato solo se si può verificare. Queste tre regole valgono per ogni file di questa pagina.</span>
+        <span class="en" lang="en">Every file on this page follows three rules, which let it be checked before it is installed.</span>
+        <span class="it" lang="it">Ogni file di questa pagina segue tre regole, che permettono di verificarlo prima di installarlo.</span>
       </p>
       <div class="points">
         <div class="point">
-          <h3><span class="en" lang="en">Signed and notarized on macOS</span><span class="it" lang="it">Firmati e notarizzati su macOS</span></h3>
+          <h3><span class="en" lang="en">macOS files are signed and notarized</span><span class="it" lang="it">I file per macOS sono firmati e notarizzati</span></h3>
           <p><span class="en" lang="en">macOS downloads are signed with the Apple Developer ID of G&amp;G Technologies and notarized by Apple.</span><span class="it" lang="it">I download per macOS sono firmati con l'Apple Developer ID di G&amp;G Technologies e notarizzati da Apple.</span></p>
         </div>
         <div class="point">
@@ -401,8 +403,8 @@
           <p><span class="en" lang="en">Each file is published with its SHA-256 checksum, shown on this site next to the file.</span><span class="it" lang="it">Ogni file è pubblicato con il suo checksum SHA-256, mostrato su questo sito accanto al file.</span></p>
         </div>
         <div class="point">
-          <h3><span class="en" lang="en">A release never changes</span><span class="it" lang="it">Una release non cambia mai</span></h3>
-          <p><span class="en" lang="en">A published file is never replaced. A correction always comes out as a new version.</span><span class="it" lang="it">Un file pubblicato non viene mai sostituito. Una correzione esce sempre come nuova versione.</span></p>
+          <h3><span class="en" lang="en">Each version stays as published</span><span class="it" lang="it">Ogni versione resta com'è stata pubblicata</span></h3>
+          <p><span class="en" lang="en">A published file stays as it is. A correction always comes out as a new version.</span><span class="it" lang="it">Un file pubblicato resta com'è. Una correzione esce sempre come nuova versione.</span></p>
         </div>
       </div>
     </div>
@@ -412,10 +414,12 @@
     <section>
       <h2><span class="en" lang="en">Checking a download</span><span class="it" lang="it">Verificare un download</span></h2>
       <p>
-        <span class="en" lang="en">Download the <code>.sha256</code> file offered next to each file on the page of the app, then run this command in the folder that holds both files.</span>
-        <span class="it" lang="it">Si scarica il file <code>.sha256</code> offerto accanto a ogni file nella pagina dell'app, poi si esegue questo comando nella cartella che contiene i due file.</span>
+        <span class="en" lang="en">Download the <code>.sha256</code> file published next to each file on the page of the app, then run this command in the folder that holds both files.</span>
+        <span class="it" lang="it">Si scarica il file <code>.sha256</code> pubblicato accanto a ogni file nella pagina dell'app, poi si esegue questo comando nella cartella che contiene i due file.</span>
       </p>
       <pre><code>shasum -a 256 -c &lt;file&gt;.sha256</code></pre>
+      <p class="win"><span class="en" lang="en">On Windows, PowerShell shows the checksum, to compare with the one in the <code>.sha256</code> file:</span><span class="it" lang="it">Su Windows, PowerShell mostra il checksum, da confrontare con quello del file <code>.sha256</code>:</span></p>
+      <pre><code>Get-FileHash &lt;file&gt; -Algorithm SHA256</code></pre>
     </section>
     <section>
       <h2><span class="en" lang="en">Automatic updates</span><span class="it" lang="it">Aggiornamenti automatici</span></h2>
@@ -435,9 +439,10 @@
           <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 14 A36 36 0 1 0 86 50 H66" fill="none" stroke="var(--accent)" stroke-width="13" stroke-linecap="round"/><circle cx="50" cy="50" r="9" fill="var(--mark-dot)"/></svg>
           <span class="brand-name">G&amp;G Technologies</span>
         </a>
-        <p><span class="en" lang="en">Software, robotics and AI that help businesses grow.</span><span class="it" lang="it">Software, robotica e AI che fanno crescere le imprese.</span></p>
+        <p><span class="en" lang="en">We design and build technology: medical wearables, robotics and artificial intelligence.</span><span class="it" lang="it">Progettiamo e realizziamo tecnologia: wearable medicali, robotica e intelligenza artificiale.</span></p>
       </div>
       <div class="footer-links">
+        <a class="en" lang="en" href="https://ggtechnologies.sm/en/products/">All G&amp;G products</a><a class="it" lang="it" href="https://ggtechnologies.sm/prodotti/">Tutti i prodotti G&amp;G</a>
         <a href="https://ggtechnologies.sm/">ggtechnologies.sm</a>
         <a href="mailto:info@ggtechnologies.sm">info@ggtechnologies.sm</a>
       </div>
@@ -495,6 +500,13 @@
     else if (arch === "arm64") arch = "ARM64";
     var label = arch ? system + " · " + arch : system;
     return parts.length > 2 ? label + " · " + parts.slice(2).join(" ") : label;
+  }
+
+  // "macos-universal" -> "Universal"; "windows-x64-portable" -> "x64 · portable"
+  function variant(platform) {
+    var label = platformLabel(platform);
+    var cut = label.indexOf(" · ");
+    return cut < 0 ? "" : label.slice(cut + 3);
   }
 
   function size(bytes) {
@@ -567,8 +579,10 @@
       if (own || (!known && assets.length === 1)) link.classList.add("primary");
       link.href = asset.url;
       link.innerHTML = ARROW;
-      link.appendChild(el("span", "dl-label", platformLabel(asset.platform)));
-      var meta = [String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
+      // The button says what it does and for which system; the variant goes in the small line.
+      var os = SYSTEMS[String(asset.platform).split("-")[0]] || String(asset.platform).split("-")[0];
+      link.appendChild(both(el("span", "dl-label"), "Download for " + os, "Download per " + os));
+      var meta = [variant(asset.platform), String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
       var unsigned = String(asset.platform).indexOf("windows") === 0 && asset.signed === false;
       link.appendChild(both(el("span", "dl-meta"),
         unsigned ? meta + " · not code-signed" : meta,

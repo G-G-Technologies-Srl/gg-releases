@@ -1,6 +1,6 @@
 # Titanium downloads — G&G Technologies
 
-Every Titanium app, signed and ready to download.
+The Titanium apps work on your computer and verify every update.
 
 Titanium is the suite of apps by [G&G Technologies](https://ggtechnologies.sm/). This page lists the latest release of each app, and it is where the installed apps find their updates.
 
@@ -23,7 +23,7 @@ Local AI on Apple silicon. An inference runtime built around unified memory, wit
 
 ### Titanium Fences
 
-Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision: metadata only, never the content.
+Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.
 
 - Systems: macOS
 - Page: https://ggtechnologies.sm/gg-releases/titanium-fences/
@@ -33,7 +33,7 @@ Control over what AI applications connect to. It allows only the destinations yo
 
 A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.
 
-**Free, and always will be.**
+**Free, including future versions.**
 
 - Systems: macOS
 - Page: https://ggtechnologies.sm/gg-releases/titanium-monitor/
@@ -49,13 +49,13 @@ An unofficial tool, not affiliated with Anthropic. It never modifies Claude Desk
 - Page: https://ggtechnologies.sm/gg-releases/titanium-profiles/
 - Latest version: https://ggtechnologies.sm/gg-releases/titanium-profiles/latest.json
 
-## What stands behind each download
+## What each download guarantees
 
-A download is worth installing only if it can be checked. These three rules hold for every file on this page.
+Every file on this page follows three rules, which let it be checked before it is installed.
 
-- **Signed and notarized on macOS.** macOS downloads are signed with the Apple Developer ID of G&G Technologies and notarized by Apple.
+- **macOS files are signed and notarized.** macOS downloads are signed with the Apple Developer ID of G&G Technologies and notarized by Apple.
 - **A checksum for every file.** Each file is published with its SHA-256 checksum, both on this page and next to the file in its release.
-- **A release never changes.** A published file is never replaced. A correction always comes out as a new version.
+- **Each version stays as published.** A published file stays as it is. A correction always comes out as a new version.
 
 ## Checking a download
 
@@ -63,6 +63,12 @@ Download the `.sha256` file offered next to each file on the page of the app, th
 
 ```bash
 shasum -a 256 -c <file>.sha256
+```
+
+On Windows, PowerShell shows the checksum, to compare with the one in the `.sha256` file:
+
+```powershell
+Get-FileHash <file> -Algorithm SHA256
 ```
 
 ## Automatic updates
@@ -73,7 +79,7 @@ The Titanium apps look for their updates on this site, and verify each download 
 
 # Download di Titanium — G&G Technologies
 
-Ogni app Titanium, firmata e pronta da scaricare.
+Le app Titanium lavorano sul vostro computer e verificano ogni aggiornamento.
 
 Titanium è la suite di app di [G&G Technologies](https://ggtechnologies.sm/). Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.
 
@@ -94,7 +100,7 @@ AI locale su Apple silicon. Un runtime di inferenza costruito attorno alla memor
 
 ### Titanium Fences
 
-Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione: solo i metadati, mai il contenuto.
+Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione, tenendo solo i metadati.
 
 - Sistemi: macOS
 - Pagina: https://ggtechnologies.sm/gg-releases/titanium-fences/?lang=it
@@ -103,7 +109,7 @@ Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le des
 
 Un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.
 
-**Gratuita, e lo resterà sempre.**
+**Gratuita, anche nelle versioni future.**
 
 - Sistemi: macOS
 - Pagina: https://ggtechnologies.sm/gg-releases/titanium-monitor/?lang=it
@@ -119,18 +125,24 @@ Uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude
 
 ## Che cosa garantisce ogni download
 
-Un download merita di essere installato solo se si può verificare. Queste tre regole valgono per ogni file di questa pagina.
+Ogni file di questa pagina segue tre regole, che permettono di verificarlo prima di installarlo.
 
 - **Firmati e notarizzati su macOS.** I download per macOS sono firmati con l'Apple Developer ID di G&G Technologies e notarizzati da Apple.
 - **Un checksum per ogni file.** Ogni file è pubblicato con il suo checksum SHA-256, in questa pagina e accanto al file nella sua release.
-- **Una release non cambia mai.** Un file pubblicato non viene mai sostituito. Una correzione esce sempre come nuova versione.
+- **Ogni versione resta com'è stata pubblicata.** Un file pubblicato resta com'è. Una correzione esce sempre come nuova versione.
 
 ## Verificare un download
 
-Si scarica il file `.sha256` offerto accanto a ogni file nella pagina dell'app, poi si esegue questo comando nella cartella che contiene i due file.
+Si scarica il file `.sha256` pubblicato accanto a ogni file nella pagina dell'app, poi si esegue questo comando nella cartella che contiene i due file.
 
 ```bash
 shasum -a 256 -c <file>.sha256
+```
+
+Su Windows, PowerShell mostra il checksum, da confrontare con quello del file `.sha256`:
+
+```powershell
+Get-FileHash <file> -Algorithm SHA256
 ```
 
 ## Aggiornamenti automatici
