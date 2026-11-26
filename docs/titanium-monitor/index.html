@@ -259,6 +259,13 @@
   .panel .back { display: inline-block; margin-top: 14px; color: var(--accent-text); font-weight: 600; font-size: 0.92rem; }
   .panel .back:hover { text-decoration: underline; text-underline-offset: 3px; }
   .facts li.soon { color: var(--faint); }
+  /* Screenshots: one image per language and theme; the stylesheet shows one of the four. */
+  html[data-theme="dark"] .shot-light, html[data-theme="light"] .shot-dark { display: none; }
+  .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
+  .shot { margin: 0; }
+  .shot:last-child { grid-column: 1 / -1; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
+  .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
   .app-note { color: var(--faint); font-size: 0.92rem; margin-top: 14px; max-width: 560px; }
   .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
   .facts li { font-size: 0.8rem; font-weight: 500; color: var(--muted); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); font-variant-numeric: tabular-nums; }
@@ -306,6 +313,8 @@
   @media (max-width: 860px) {
     .app-hero, .verify-box, .details, .features { grid-template-columns: 1fr; gap: 36px; }
     .features { gap: 14px; }
+    .shots { grid-template-columns: 1fr; }
+    .shot-tall { max-width: 380px; }
   }
 </style>
 </head>
@@ -377,6 +386,37 @@
         <li><strong class="en" lang="en">Uninstall, knowing what stays</strong><strong class="it" lang="it">Disinstallare sapendo che cosa resta</strong><span class="en" lang="en">An app goes to the Trash with its data, and before you confirm you are told what its installer put elsewhere.</span><span class="it" lang="it">Un'app va nel Cestino con i suoi dati, e prima della conferma vi dice che cosa il suo installatore ha messo altrove.</span></li>
         <li><strong class="en" lang="en">History and alerts</strong><strong class="it" lang="it">Storico e avvisi</strong><span class="en" lang="en">What weighed on the Mac and for how long, with charts of the last hour and the last day. If you want, a notification when the Mac stays under strain or memory runs out, with the name of the app responsible.</span><span class="it" lang="it">Che cosa ha pesato sul Mac e per quanto, con i grafici dell'ultima ora e dell'ultimo giorno. Se li volete, una notifica quando il Mac resta sotto sforzo o la memoria si esaurisce, con il nome dell'app responsabile.</span></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section" id="shots">
+    <div class="wrap">
+      <p class="eyebrow"><span class="en" lang="en">Screenshots</span><span class="it" lang="it">Schermate</span></p>
+      <h2><span class="en" lang="en">See it at work.</span><span class="it" lang="it">Come si presenta.</span></h2>
+      <p class="lead"><span class="en" lang="en">Drawn by the app itself on a demonstration Mac, with no real data.</span><span class="it" lang="it">Disegnate dall'app stessa su un Mac dimostrativo, senza dati reali.</span></p>
+      <div class="shots">
+        <figure class="shot shot-wide">
+          <img class="en shot-dark" lang="en" src="shots/overview-en-dark.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="The overview: the state of the Mac in plain words, CPU, GPU and memory gauges, history charts and the heaviest apps.">
+          <img class="it shot-dark" lang="it" src="shots/overview-it-dark.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="La panoramica: lo stato del Mac in chiaro, gli indicatori di CPU, GPU e memoria, i grafici dello storico e le app che pesano di più.">
+          <img class="en shot-light" lang="en" src="shots/overview-en-light.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="The overview: the state of the Mac in plain words, CPU, GPU and memory gauges, history charts and the heaviest apps.">
+          <img class="it shot-light" lang="it" src="shots/overview-it-light.webp" width="1600" height="1391" loading="lazy" decoding="async" alt="La panoramica: lo stato del Mac in chiaro, gli indicatori di CPU, GPU e memoria, i grafici dello storico e le app che pesano di più.">
+          <figcaption><span class="en" lang="en">The overview: what is weighing the Mac down, in plain words, and where its resources go.</span><span class="it" lang="it">La panoramica: che cosa appesantisce il Mac, detto in chiaro, e dove vanno le sue risorse.</span></figcaption>
+        </figure>
+        <figure class="shot shot-tall">
+          <img class="en shot-dark" lang="en" src="shots/popover-en-dark.webp" width="760" height="1086" loading="lazy" decoding="async" alt="The menu bar popover: CPU, GPU, memory and network, with the apps that use them most.">
+          <img class="it shot-dark" lang="it" src="shots/popover-it-dark.webp" width="760" height="1086" loading="lazy" decoding="async" alt="Il riquadro della barra dei menu: CPU, GPU, memoria e rete, con le app che le usano di più.">
+          <img class="en shot-light" lang="en" src="shots/popover-en-light.webp" width="760" height="1086" loading="lazy" decoding="async" alt="The menu bar popover: CPU, GPU, memory and network, with the apps that use them most.">
+          <img class="it shot-light" lang="it" src="shots/popover-it-light.webp" width="760" height="1086" loading="lazy" decoding="async" alt="Il riquadro della barra dei menu: CPU, GPU, memoria e rete, con le app che le usano di più.">
+          <figcaption><span class="en" lang="en">From the menu bar, one click away.</span><span class="it" lang="it">Dalla barra dei menu, a un clic.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <img class="en shot-dark" lang="en" src="shots/processes-en-dark.webp" width="1600" height="954" loading="lazy" decoding="async" alt="The processes grouped by app, and the card of one process: who signed it, its explanation and its charts.">
+          <img class="it shot-dark" lang="it" src="shots/processes-it-dark.webp" width="1600" height="954" loading="lazy" decoding="async" alt="I processi raggruppati per app e la scheda di un processo: chi lo ha firmato, la spiegazione e i grafici.">
+          <img class="en shot-light" lang="en" src="shots/processes-en-light.webp" width="1600" height="954" loading="lazy" decoding="async" alt="The processes grouped by app, and the card of one process: who signed it, its explanation and its charts.">
+          <img class="it shot-light" lang="it" src="shots/processes-it-light.webp" width="1600" height="954" loading="lazy" decoding="async" alt="I processi raggruppati per app e la scheda di un processo: chi lo ha firmato, la spiegazione e i grafici.">
+          <figcaption><span class="en" lang="en">Processes grouped by app, and the card that says what each one is.</span><span class="it" lang="it">I processi raggruppati per app, e la scheda che dice che cos'è ognuno.</span></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 

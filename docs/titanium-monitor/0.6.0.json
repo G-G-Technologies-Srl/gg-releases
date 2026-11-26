@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "app": "titanium-monitor",
+  "name": "Titanium Monitor",
+  "version": "0.6.0",
+  "build": "55",
+  "published": "2026-11-26T11:04:02Z",
+  "tag": "titanium-monitor-v0.6.0",
+  "team": "VL2V35Z2H7",
+  "notes": "- Interface language in Settings: General > Language, with \"Same as the Mac\", \"English\" and \"Italiano\". It is the same choice as System Settings > Language & Region > Applications, and it applies after a relaunch: the pane offers \"Relaunch Now\".\n- The popover shows the startup disk: how full it is, a level bar, the space used out of the total and the space available. It turns orange, \"Almost full\", at the same threshold as the Overview warning; a click opens the Storage section.\n- The popover opens at its full height and keeps it, whatever the metric, instead of growing under the pointer as the first figures arrive.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.6.0",
+  "assets": [
+    {
+      "platform": "macos-universal",
+      "kind": "zip",
+      "signed": true,
+      "minimum_os": "26.0",
+      "file": "TitaniumMonitor-0.6.0.zip",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-monitor-v0.6.0/TitaniumMonitor-0.6.0.zip",
+      "size": 5525780,
+      "sha256": "39641c143637a5c766880458ef69ded9e935aeb65a07bcb1fd8dbc19ea7c0592"
+    }
+  ]
+}

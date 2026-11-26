@@ -257,6 +257,13 @@
   .panel .back { display: inline-block; margin-top: 14px; color: var(--accent-text); font-weight: 600; font-size: 0.92rem; }
   .panel .back:hover { text-decoration: underline; text-underline-offset: 3px; }
   .facts li.soon { color: var(--faint); }
+  /* Screenshots: one image per language and theme; the stylesheet shows one of the four. */
+  html[data-theme="dark"] .shot-light, html[data-theme="light"] .shot-dark { display: none; }
+  .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
+  .shot { margin: 0; }
+  .shot:last-child { grid-column: 1 / -1; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
+  .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
   .app-note { color: var(--faint); font-size: 0.92rem; margin-top: 14px; max-width: 560px; }
   .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
   .facts li { font-size: 0.8rem; font-weight: 500; color: var(--muted); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); font-variant-numeric: tabular-nums; }
@@ -304,6 +311,8 @@
   @media (max-width: 860px) {
     .app-hero, .verify-box, .details, .features { grid-template-columns: 1fr; gap: 36px; }
     .features { gap: 14px; }
+    .shots { grid-template-columns: 1fr; }
+    .shot-tall { max-width: 380px; }
   }
 </style>
 </head>
