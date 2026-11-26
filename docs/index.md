@@ -83,8 +83,8 @@ Le app Titanium lavorano sul vostro computer e verificano ogni aggiornamento.
 
 Titanium è la suite di app di [G&G Technologies](https://ggtechnologies.sm/). Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.
 
-- Pagina: https://ggtechnologies.sm/gg-releases/?lang=it
-- Ogni app ha la sua pagina, con che cosa fa e i requisiti, e una volta rilasciata il download per ogni sistema, le note di rilascio e tutte le versioni: `https://ggtechnologies.sm/gg-releases/<id>/`, per esempio https://ggtechnologies.sm/gg-releases/titanium-monitor/?lang=it
+- Pagina: https://ggtechnologies.sm/gg-releases/it/
+- Ogni app ha la sua pagina, con che cosa fa e i requisiti, e una volta rilasciata il download per ogni sistema, le note di rilascio e tutte le versioni: `https://ggtechnologies.sm/gg-releases/<id>/`, per esempio https://ggtechnologies.sm/gg-releases/it/titanium-monitor/
 - Un link alla pagina che fa anche partire il download dell'ultima versione: si aggiunge `?download=macos`, `?download=windows`, `?download=linux`, una piattaforma esatta come `?download=windows-x64`, oppure `?download` da solo per il sistema di chi visita.
 
 ## La suite Titanium
@@ -96,14 +96,14 @@ La versione pubblicata di ogni app, se c'è, si legge in [index.json](https://gg
 Titanium AI esegue l'intelligenza artificiale in locale, su Apple silicon. È un runtime di inferenza costruito attorno alla memoria unificata, con un'API compatibile con OpenAI, per eseguire i modelli linguistici sul proprio Mac.
 
 - Sistemi: macOS, Apple silicon
-- Pagina: https://ggtechnologies.sm/gg-releases/titanium-ai/?lang=it
+- Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-ai/
 
 ### Titanium Fences
 
 Titanium Fences controlla a che cosa si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione, tenendo solo i metadati.
 
 - Sistemi: macOS
-- Pagina: https://ggtechnologies.sm/gg-releases/titanium-fences/?lang=it
+- Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-fences/
 
 ### Titanium Monitor
 
@@ -112,7 +112,7 @@ Titanium Monitor è un'utility della barra dei menu che mostra come vengono usat
 **Gratuita, anche nelle versioni future.**
 
 - Sistemi: macOS
-- Pagina: https://ggtechnologies.sm/gg-releases/titanium-monitor/?lang=it
+- Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-monitor/
 
 ### Titanium Profiles
 
@@ -121,7 +121,7 @@ Titanium Profiles tiene affiancati più account di Claude Desktop sullo stesso c
 È uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali.
 
 - Sistemi: macOS, Windows
-- Pagina: https://ggtechnologies.sm/gg-releases/titanium-profiles/?lang=it
+- Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-profiles/
 
 ## Che cosa garantisce ogni download
 

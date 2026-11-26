@@ -6,7 +6,7 @@
 
 This file is written for language models and agents. It says what the suite is, where the current facts are, and how to answer the usual questions without guessing.
 
-- Site: https://ggtechnologies.sm/gg-releases/ (in English and Italian: `?lang=en`, `?lang=it`)
+- Site: https://ggtechnologies.sm/gg-releases/ (in English; in Italian at https://ggtechnologies.sm/gg-releases/it/ , and each app at `/it/<id>/`)
 - The page of each app: `https://ggtechnologies.sm/gg-releases/<id>/`, with what the app does and its requirements, and once it is released the download for each system, the release notes and every version. Before the first release the page exists and says that the app has not been released yet.
 - The same page as Markdown: https://ggtechnologies.sm/gg-releases/index.md
 - Publisher: G&G Technologies Srl, https://ggtechnologies.sm/ — contact: info@ggtechnologies.sm
@@ -59,9 +59,9 @@ Download addresses always start with `https://github.com/G-G-Technologies-Srl/gg
 
 ## Italiano
 
-- **Che cos'è**: la pagina dei download di Titanium, la suite di app di G&G Technologies. Le quattro app sono quelle elencate sopra. Ogni app ha la sua pagina, `https://ggtechnologies.sm/gg-releases/<id>/?lang=it`, con che cosa fa e i requisiti; prima del rilascio dice che l'app non è ancora uscita.
+- **Che cos'è**: la pagina dei download di Titanium, la suite di app di G&G Technologies. Le quattro app sono quelle elencate sopra. Ogni app ha la sua pagina, `https://ggtechnologies.sm/gg-releases/it/<id>/`, con che cosa fa e i requisiti; prima del rilascio dice che l'app non è ancora uscita.
 - **Quali versioni esistono**: si leggono da `index.json` e da `<id>/latest.json`, non da questo file. Un'app che manca da `index.json`, o il cui `latest.json` risponde 404, non è ancora stata rilasciata.
-- **Dove si scarica**: dalla pagina dell'app, `https://ggtechnologies.sm/gg-releases/<id>/?lang=it`, che propone per primo il file per il sistema di chi visita (con `&download=macos` o `&download=windows` il download parte da solo), oppure dall'indirizzo `url` del file per il proprio sistema in `latest.json`. Gli indirizzi ufficiali iniziano sempre con `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`.
+- **Dove si scarica**: dalla pagina dell'app, `https://ggtechnologies.sm/gg-releases/it/<id>/`, che propone per primo il file per il sistema di chi visita (con `?download=macos` o `?download=windows` il download parte da solo), oppure dall'indirizzo `url` del file per il proprio sistema in `latest.json`. Gli indirizzi ufficiali iniziano sempre con `https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/`.
 - **Verifica**: i file per macOS sono firmati con l'Apple Developer ID di G&G Technologies e notarizzati da Apple. Ogni file ha il suo checksum SHA-256; si controlla con `shasum -a 256 -c <file>.sha256`.
 - **Ogni versione resta com'è stata pubblicata**: una correzione esce sempre come nuova versione.
 - **Aggiornamenti**: le app leggono il proprio `latest.json` e verificano ogni download prima di installarlo. Il controllo non invia alcuna informazione sull'utente o sul computer.

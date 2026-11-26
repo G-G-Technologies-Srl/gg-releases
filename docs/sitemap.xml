@@ -1,29 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ggtechnologies.sm/gg-releases/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ggtechnologies.sm/gg-releases/it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/"/>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ggtechnologies.sm/gg-releases/titanium-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-ai/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-ai/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ggtechnologies.sm/gg-releases/it/titanium-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-ai/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-ai/"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ggtechnologies.sm/gg-releases/titanium-fences/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-fences/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-fences/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-fences/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ggtechnologies.sm/gg-releases/it/titanium-fences/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-fences/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-fences/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-fences/"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ggtechnologies.sm/gg-releases/titanium-monitor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-monitor/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-monitor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-monitor/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ggtechnologies.sm/gg-releases/it/titanium-monitor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-monitor/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-monitor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-monitor/"/>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ggtechnologies.sm/gg-releases/titanium-profiles/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-profiles/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ggtechnologies.sm/gg-releases/it/titanium-profiles/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ggtechnologies.sm/gg-releases/titanium-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ggtechnologies.sm/gg-releases/it/titanium-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ggtechnologies.sm/gg-releases/titanium-profiles/"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
