@@ -1,6 +1,6 @@
 {
   "schema": 1,
   "apps": [
-    {"app": "titanium-monitor", "name": "Titanium Monitor", "version": "0.4.0", "latest": "https://g-g-technologies-srl.github.io/gg-releases/titanium-monitor/latest.json", "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.4.0"}
+    {"app": "titanium-monitor", "name": "Titanium Monitor", "version": "0.5.0", "latest": "https://g-g-technologies-srl.github.io/gg-releases/titanium-monitor/latest.json", "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.5.0"}
   ]
 }

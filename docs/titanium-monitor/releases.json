@@ -6,6 +6,31 @@
   "schema": 1,
   "app": "titanium-monitor",
   "name": "Titanium Monitor",
+  "version": "0.5.0",
+  "build": "53",
+  "published": "2026-11-26T10:06:59Z",
+  "tag": "titanium-monitor-v0.5.0",
+  "team": "VL2V35Z2H7",
+  "notes": "- The menu bar shows the figures you choose, each with its symbol: processor, memory, free space on the startup disk, disk activity (read and written), network speed (in and out). Pick them in Settings > General > \"In the menu bar\". If you only had the processor percentage, you still have it; if you had it off, it stays off.\n- Settings are split into panes: General, Notifications, Data, Lookup, Updates.\n- In the process inspector, the buttons of a row share its width evenly.\n- The menu bar popover closes when it opens a window, and that window comes to the front.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.5.0",
+  "assets": [
+    {
+      "platform": "macos-universal",
+      "kind": "zip",
+      "signed": true,
+      "minimum_os": "26.0",
+      "file": "TitaniumMonitor-0.5.0.zip",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-monitor-v0.5.0/TitaniumMonitor-0.5.0.zip",
+      "size": 5479622,
+      "sha256": "4a10bde06668d2c28be853b5b26eb4dacda2d9638f01fcbf629db44fe3ab3890"
+    }
+  ]
+}
+,
+{
+  "schema": 1,
+  "app": "titanium-monitor",
+  "name": "Titanium Monitor",
   "version": "0.4.0",
   "build": "49",
   "published": "2026-11-25T15:05:40Z",

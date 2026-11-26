@@ -2,23 +2,23 @@
   "schema": 1,
   "app": "titanium-monitor",
   "name": "Titanium Monitor",
-  "version": "0.4.0",
-  "build": "49",
-  "published": "2026-11-25T15:05:40Z",
-  "tag": "titanium-monitor-v0.4.0",
+  "version": "0.5.0",
+  "build": "53",
+  "published": "2026-11-26T10:06:59Z",
+  "tag": "titanium-monitor-v0.5.0",
   "team": "VL2V35Z2H7",
-  "notes": "Titanium Monitor now checks for updates, like every app in the Titanium suite.\n\n- Once a day it asks the G&G downloads site for the latest version; the request carries only the app's name and version. Turn it off in Settings (\"Check for updates automatically\"), or use \"Check for Updates…\" to check right away.\n- A new version shows up as a quiet line at the bottom of the popover and the sidebar, and in Settings, with its notes. No window ever opens on its own. \"Skip This Version\" stays silent until the next one.\n- The update is downloaded only when you ask. Before it replaces the running app, in one step, its SHA-256, signature, Developer ID, team, notarization, identifier and version are checked; if any check fails, the file is deleted.\n- Where the app cannot replace itself (a read-only folder, another user's copy), it hands you the verified app to drag into Applications.\n- One copy only: the update happens in place, and the new version removes the old one on its first launch.",
-  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.4.0",
+  "notes": "- The menu bar shows the figures you choose, each with its symbol: processor, memory, free space on the startup disk, disk activity (read and written), network speed (in and out). Pick them in Settings > General > \"In the menu bar\". If you only had the processor percentage, you still have it; if you had it off, it stays off.\n- Settings are split into panes: General, Notifications, Data, Lookup, Updates.\n- In the process inspector, the buttons of a row share its width evenly.\n- The menu bar popover closes when it opens a window, and that window comes to the front.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.5.0",
   "assets": [
     {
       "platform": "macos-universal",
       "kind": "zip",
       "signed": true,
       "minimum_os": "26.0",
-      "file": "TitaniumMonitor-0.4.0.zip",
-      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-monitor-v0.4.0/TitaniumMonitor-0.4.0.zip",
-      "size": 5383787,
-      "sha256": "2d92261c5c83fa1098bbba42351b625d4b1575980d06210867f82a385e364847"
+      "file": "TitaniumMonitor-0.5.0.zip",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-monitor-v0.5.0/TitaniumMonitor-0.5.0.zip",
+      "size": 5479622,
+      "sha256": "4a10bde06668d2c28be853b5b26eb4dacda2d9638f01fcbf629db44fe3ab3890"
     }
   ]
 }
