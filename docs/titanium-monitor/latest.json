@@ -2,23 +2,23 @@
   "schema": 1,
   "app": "titanium-monitor",
   "name": "Titanium Monitor",
-  "version": "0.6.0",
-  "build": "55",
-  "published": "2026-11-26T11:04:02Z",
-  "tag": "titanium-monitor-v0.6.0",
+  "version": "0.7.0",
+  "build": "57",
+  "published": "2026-11-26T13:23:16Z",
+  "tag": "titanium-monitor-v0.7.0",
   "team": "VL2V35Z2H7",
-  "notes": "- Interface language in Settings: General > Language, with \"Same as the Mac\", \"English\" and \"Italiano\". It is the same choice as System Settings > Language & Region > Applications, and it applies after a relaunch: the pane offers \"Relaunch Now\".\n- The popover shows the startup disk: how full it is, a level bar, the space used out of the total and the space available. It turns orange, \"Almost full\", at the same threshold as the Overview warning; a click opens the Storage section.\n- The popover opens at its full height and keeps it, whatever the metric, instead of growing under the pointer as the first figures arrive.",
-  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.6.0",
+  "notes": "- The last disk analysis is kept between launches: the Storage section shows it again, with its date, until you analyze again. Moving items to the Trash or uninstalling apps needs a fresh analysis, and the section says so. \"Forget Everything\" deletes the saved analysis.\n- The disk card in the popover shows how much space caches, logs and files Xcode rebuilds take, according to the last analysis and when it ran; without an analysis it says how to find out. It is always one line, so the popover keeps its height.\n- A new version shows in the menu bar: a dot on the icon until it is installed, skipped or postponed, and a notification when the daily check finds it (once per version, can be turned off in the Updates pane). A click on the notification or on the popover row opens Settings on Updates.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-monitor-v0.7.0",
   "assets": [
     {
       "platform": "macos-universal",
       "kind": "zip",
       "signed": true,
       "minimum_os": "26.0",
-      "file": "TitaniumMonitor-0.6.0.zip",
-      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-monitor-v0.6.0/TitaniumMonitor-0.6.0.zip",
-      "size": 5525780,
-      "sha256": "39641c143637a5c766880458ef69ded9e935aeb65a07bcb1fd8dbc19ea7c0592"
+      "file": "TitaniumMonitor-0.7.0.zip",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-monitor-v0.7.0/TitaniumMonitor-0.7.0.zip",
+      "size": 5652483,
+      "sha256": "524405244954682ba65ae9ac5dd95abb6ec0781013d4fc628e2739d5bc24cbf8"
     }
   ]
 }
