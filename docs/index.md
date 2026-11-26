@@ -15,7 +15,7 @@ Which version of each app is published, if any, is in [index.json](https://ggtec
 
 ### Titanium AI
 
-Local AI on Apple silicon. An inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.
+Titanium AI runs artificial intelligence locally, on Apple silicon. It is an inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.
 
 - Systems: macOS, Apple silicon
 - Page: https://ggtechnologies.sm/gg-releases/titanium-ai/
@@ -23,7 +23,7 @@ Local AI on Apple silicon. An inference runtime built around unified memory, wit
 
 ### Titanium Fences
 
-Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.
+Titanium Fences controls what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.
 
 - Systems: macOS
 - Page: https://ggtechnologies.sm/gg-releases/titanium-fences/
@@ -31,7 +31,7 @@ Control over what AI applications connect to. It allows only the destinations yo
 
 ### Titanium Monitor
 
-A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.
+Titanium Monitor is a menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.
 
 **Free, including future versions.**
 
@@ -41,9 +41,9 @@ A menu bar utility that shows how CPU, GPU, memory, network and disk are used, s
 
 ### Titanium Profiles
 
-Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.
+Titanium Profiles keeps several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.
 
-An unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.
+It is an unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.
 
 - Systems: macOS, Windows
 - Page: https://ggtechnologies.sm/gg-releases/titanium-profiles/
@@ -93,21 +93,21 @@ La versione pubblicata di ogni app, se c'è, si legge in [index.json](https://gg
 
 ### Titanium AI
 
-AI locale su Apple silicon. Un runtime di inferenza costruito attorno alla memoria unificata, con un'API compatibile con OpenAI, per eseguire i modelli linguistici sul proprio Mac.
+Titanium AI esegue l'intelligenza artificiale in locale, su Apple silicon. È un runtime di inferenza costruito attorno alla memoria unificata, con un'API compatibile con OpenAI, per eseguire i modelli linguistici sul proprio Mac.
 
 - Sistemi: macOS, Apple silicon
 - Pagina: https://ggtechnologies.sm/gg-releases/titanium-ai/?lang=it
 
 ### Titanium Fences
 
-Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione, tenendo solo i metadati.
+Titanium Fences controlla a che cosa si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione, tenendo solo i metadati.
 
 - Sistemi: macOS
 - Pagina: https://ggtechnologies.sm/gg-releases/titanium-fences/?lang=it
 
 ### Titanium Monitor
 
-Un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.
+Titanium Monitor è un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.
 
 **Gratuita, anche nelle versioni future.**
 
@@ -116,9 +116,9 @@ Un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria,
 
 ### Titanium Profiles
 
-Più account Claude Desktop affiancati sullo stesso computer, per esempio uno aziendale e uno personale.
+Titanium Profiles tiene affiancati più account di Claude Desktop sullo stesso computer, per esempio uno aziendale e uno personale.
 
-Uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali.
+È uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali.
 
 - Sistemi: macOS, Windows
 - Pagina: https://ggtechnologies.sm/gg-releases/titanium-profiles/?lang=it

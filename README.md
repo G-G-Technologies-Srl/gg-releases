@@ -25,26 +25,26 @@
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-ai/">Titanium AI</a></h3>
-      <p>Local AI on Apple silicon. An inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.</p>
+      <p>Titanium AI runs artificial intelligence locally, on Apple silicon. It is an inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.</p>
       <sub><b>macOS</b> · Apple silicon</sub>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-fences/">Titanium Fences</a></h3>
-      <p>Control over what your AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.</p>
+      <p>Titanium Fences controls what your AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.</p>
       <sub><b>macOS</b></sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-monitor/">Titanium Monitor</a> &nbsp;<sup><code>Free</code></sup></h3>
-      <p>A menu bar utility that shows how CPU, GPU, memory, network and disk are being used, tells you in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.</p>
+      <p>Titanium Monitor is a menu bar utility that shows how CPU, GPU, memory, network and disk are being used, tells you in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.</p>
       <p><b>Free, including future versions.</b></p>
       <sub><b>macOS</b></sub>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-profiles/">Titanium Profiles</a></h3>
-      <p>Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.</p>
-      <p><sub>An unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.</sub></p>
+      <p>Titanium Profiles keeps several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.</p>
+      <p><sub>It is an unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.</sub></p>
       <sub><b>macOS</b> · <b>Windows</b></sub>
     </td>
   </tr>
