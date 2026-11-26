@@ -62,13 +62,13 @@
         "position": 1,
         "item": {
           "@type": "SoftwareApplication",
-          "@id": "https://ggtechnologies.sm/gg-releases/#titanium-ai",
+          "@id": "https://ggtechnologies.sm/gg-releases/titanium-ai/#app",
           "name": "Titanium AI",
-          "url": "https://ggtechnologies.sm/gg-releases/#titanium-ai",
+          "url": "https://ggtechnologies.sm/gg-releases/titanium-ai/",
           "description": "Local AI on Apple silicon. An inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.",
           "operatingSystem": "macOS",
           "applicationCategory": "DeveloperApplication",
-          "installUrl": "https://ggtechnologies.sm/gg-releases/",
+          "installUrl": "https://ggtechnologies.sm/gg-releases/titanium-ai/",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -77,13 +77,13 @@
         "position": 2,
         "item": {
           "@type": "SoftwareApplication",
-          "@id": "https://ggtechnologies.sm/gg-releases/#titanium-fences",
+          "@id": "https://ggtechnologies.sm/gg-releases/titanium-fences/#app",
           "name": "Titanium Fences",
-          "url": "https://ggtechnologies.sm/gg-releases/#titanium-fences",
+          "url": "https://ggtechnologies.sm/gg-releases/titanium-fences/",
           "description": "Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision: metadata only, never the content.",
           "operatingSystem": "macOS",
           "applicationCategory": "SecurityApplication",
-          "installUrl": "https://ggtechnologies.sm/gg-releases/",
+          "installUrl": "https://ggtechnologies.sm/gg-releases/titanium-fences/",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -92,13 +92,15 @@
         "position": 3,
         "item": {
           "@type": "SoftwareApplication",
-          "@id": "https://ggtechnologies.sm/gg-releases/#titanium-monitor",
+          "@id": "https://ggtechnologies.sm/gg-releases/titanium-monitor/#app",
           "name": "Titanium Monitor",
-          "url": "https://ggtechnologies.sm/gg-releases/#titanium-monitor",
+          "url": "https://ggtechnologies.sm/gg-releases/titanium-monitor/",
           "description": "A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.",
           "operatingSystem": "macOS",
           "applicationCategory": "UtilitiesApplication",
-          "installUrl": "https://ggtechnologies.sm/gg-releases/",
+          "installUrl": "https://ggtechnologies.sm/gg-releases/titanium-monitor/",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Free, and always will be." },
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       },
@@ -107,13 +109,13 @@
         "position": 4,
         "item": {
           "@type": "SoftwareApplication",
-          "@id": "https://ggtechnologies.sm/gg-releases/#titanium-profiles",
+          "@id": "https://ggtechnologies.sm/gg-releases/titanium-profiles/#app",
           "name": "Titanium Profiles",
-          "url": "https://ggtechnologies.sm/gg-releases/#titanium-profiles",
+          "url": "https://ggtechnologies.sm/gg-releases/titanium-profiles/",
           "description": "Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one. An unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.",
           "operatingSystem": "macOS, Windows",
           "applicationCategory": "UtilitiesApplication",
-          "installUrl": "https://ggtechnologies.sm/gg-releases/",
+          "installUrl": "https://ggtechnologies.sm/gg-releases/titanium-profiles/",
           "publisher": { "@id": "https://ggtechnologies.sm/#organization" }
         }
       }
@@ -238,6 +240,12 @@
   .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
   .card h3 a:hover { color: var(--accent-text); }
+  .card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .free { display: inline-flex; align-items: center; font-family: var(--font); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; line-height: 1; padding: 5px 10px 5px 11px; border-radius: 999px; background: var(--gradient); color: var(--btn-text); box-shadow: 0 4px 14px var(--btn-shadow); white-space: nowrap; }
+  .card-free { color: var(--accent-text); font-size: 0.88rem; font-weight: 600; margin-top: 10px; }
+  .card-more { margin-top: 12px; font-size: 0.86rem; }
+  .card-more a { color: var(--accent-text); font-weight: 600; }
+  .card-more a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .pill { flex: 0 0 auto; font-size: 0.78rem; font-weight: 600; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--border-strong); color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .pill.version { color: var(--accent-text); border-color: transparent; background: var(--tint); }
   .card-text { color: var(--muted); font-size: 0.94rem; }
@@ -345,24 +353,29 @@
       <p class="notice" id="notice" role="status"></p>
       <div class="grid" id="grid">
         <article class="card" id="titanium-ai" data-app="titanium-ai">
-          <div class="card-head"><h3>Titanium AI</h3><span class="pill" hidden></span></div>
+          <div class="card-head"><div class="card-title"><h3><a href="titanium-ai/">Titanium AI</a></h3></div><span class="pill" hidden></span></div>
           <p class="card-text"><span class="en" lang="en">Local AI on Apple silicon. An inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.</span><span class="it" lang="it">AI locale su Apple silicon. Un runtime di inferenza costruito attorno alla memoria unificata, con un'API compatibile con OpenAI, per eseguire i modelli linguistici sul proprio Mac.</span></p>
+          <p class="card-more"><a href="titanium-ai/"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span> <span aria-hidden="true">→</span></a></p>
           <div class="card-body"><ul class="systems"><li>macOS · Apple silicon</li></ul></div>
         </article>
         <article class="card" id="titanium-fences" data-app="titanium-fences">
-          <div class="card-head"><h3>Titanium Fences</h3><span class="pill" hidden></span></div>
+          <div class="card-head"><div class="card-title"><h3><a href="titanium-fences/">Titanium Fences</a></h3></div><span class="pill" hidden></span></div>
           <p class="card-text"><span class="en" lang="en">Control over what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision: metadata only, never the content.</span><span class="it" lang="it">Il controllo su ciò a cui si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione: solo i metadati, mai il contenuto.</span></p>
+          <p class="card-more"><a href="titanium-fences/"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span> <span aria-hidden="true">→</span></a></p>
           <div class="card-body"><ul class="systems"><li>macOS</li></ul></div>
         </article>
         <article class="card" id="titanium-monitor" data-app="titanium-monitor">
-          <div class="card-head"><h3>Titanium Monitor</h3><span class="pill" hidden></span></div>
+          <div class="card-head"><div class="card-title"><h3><a href="titanium-monitor/">Titanium Monitor</a></h3><span class="free" title="Free, and always will be · Gratuita, e lo resterà sempre">FREE</span></div><span class="pill" hidden></span></div>
           <p class="card-text"><span class="en" lang="en">A menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.</span><span class="it" lang="it">Un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.</span></p>
+          <p class="card-free"><span class="en" lang="en">Free, and always will be.</span><span class="it" lang="it">Gratuita, e lo resterà sempre.</span></p>
+          <p class="card-more"><a href="titanium-monitor/"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span> <span aria-hidden="true">→</span></a></p>
           <div class="card-body"><ul class="systems"><li>macOS</li></ul></div>
         </article>
         <article class="card" id="titanium-profiles" data-app="titanium-profiles">
-          <div class="card-head"><h3>Titanium Profiles</h3><span class="pill" hidden></span></div>
+          <div class="card-head"><div class="card-title"><h3><a href="titanium-profiles/">Titanium Profiles</a></h3></div><span class="pill" hidden></span></div>
           <p class="card-text"><span class="en" lang="en">Several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.</span><span class="it" lang="it">Più account Claude Desktop affiancati sullo stesso computer, per esempio uno aziendale e uno personale.</span></p>
           <p class="card-note"><span class="en" lang="en">An unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.</span><span class="it" lang="it">Uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali.</span></p>
+          <p class="card-more"><a href="titanium-profiles/"><span class="en" lang="en">What it does</span><span class="it" lang="it">Cosa fa</span> <span aria-hidden="true">→</span></a></p>
           <div class="card-body"><ul class="systems"><li>macOS</li><li>Windows</li></ul></div>
         </article>
       </div>
@@ -465,7 +478,8 @@
     return node;
   }
 
-  // page(id): the page of a published app, with its notes and every version.
+  // page(id): the page of an app: what it does, and once released its download, notes and
+  // every version.
   function page(id) { return encodeURIComponent(id) + "/"; }
 
   function here(url) {
@@ -575,6 +589,9 @@
     var more = both(el("a"), "Release notes and all versions", "Note di rilascio e tutte le versioni");
     more.href = page(view.node.id);
     foot.appendChild(more);
+    // The foot links to the page of the app: "What it does" would say it twice.
+    var about = view.node.querySelector(".card-more");
+    if (about) about.remove();
     var title = view.node.querySelector("h3");
     if (title && !title.querySelector("a")) {
       var name = el("a", "", title.textContent);
