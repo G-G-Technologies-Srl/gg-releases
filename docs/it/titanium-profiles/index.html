@@ -172,6 +172,10 @@
   .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); opacity: 0; transition: opacity 0.22s; }
   .card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); }
   .card:hover::before, .card.released::before { opacity: 1; }
+  /* A thumbnail: the first screenshot of the app, in the language and theme of the page. */
+  .card-shot { display: block; margin: -30px -28px 22px; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--border); background: var(--panel); }
+  .card-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+  html[data-theme="dark"] .card-shot .shot-light, html[data-theme="light"] .card-shot .shot-dark { display: none; }
   .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
   .card h3 { font-size: 1.28rem; font-weight: 700; }
   .card h3 a:hover { color: var(--accent-text); }
@@ -232,6 +236,7 @@
     .nav-links a { display: none; }
     .brand-payoff { display: none; }
     .card { padding: 26px 22px; }
+    .card-shot { margin: -26px -22px 20px; }
     .nav { gap: 14px; padding: 0 18px; }
     .nav-links { gap: 14px; }
     .dl { padding: 11px 18px; flex-wrap: wrap; gap: 0 12px; border-radius: 20px; }
