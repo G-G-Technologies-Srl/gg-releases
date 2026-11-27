@@ -282,9 +282,18 @@
   .panel .waiting { color: var(--faint); font-size: 0.94rem; }
   .panel .others { margin-top: 18px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--faint); margin-bottom: 10px; }
   .panel .small { color: var(--faint); font-size: 0.84rem; margin-top: 14px; }
+  /* Download buttons in the panel: the label on one line, what the file is right under it,
+     so a long description (architecture, size, signature) never squeezes the label. */
+  .panel .dl { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1px 14px; padding: 10px 22px; line-height: 1.35; }
+  .panel .dl svg { grid-row: span 2; }
+  .panel .dl-label { white-space: nowrap; }
+  .panel .dl-meta { margin-left: 0; width: auto; white-space: normal; }
   .starting { display: none; margin-top: 22px; padding: 14px 18px; border-radius: var(--radius); background: var(--tint); color: var(--muted); font-size: 0.94rem; }
   .starting.show { display: block; }
   .section { padding: 72px 0; border-top: 1px solid var(--border); }
+  /* The download panel is taller than the text beside it: less room under the opening. */
+  .hero { padding-bottom: 44px; }
+  .hero + .section { padding-top: 56px; }
   .section h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
   .section .lead { color: var(--muted); font-size: 0.98rem; margin-bottom: 26px; max-width: 640px; }
   .notes { max-width: 720px; color: var(--muted); font-size: 1rem; }
@@ -575,7 +584,7 @@
     var text = [first || "", String(asset.kind || "").toUpperCase(), size(asset.size)].filter(Boolean).join(" · ");
     var unsigned = systemOf(asset.platform) !== "macos" && asset.signed === false;
     return both(el("span", "dl-meta"),
-      text + (unsigned ? " · not code-signed" : "") + (extra ? extra[0] : ""),
+      text + (unsigned ? " · not code‑signed" : "") + (extra ? extra[0] : ""),
       text + (unsigned ? " · senza firma del codice" : "") + (extra ? extra[1] : ""));
   }
   function button(asset, primary) {
