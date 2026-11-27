@@ -263,6 +263,9 @@
   .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
   .shot { margin: 0; }
   .shot:last-child { grid-column: 1 / -1; }
+  /* Screenshots of the same shape (Titanium Profiles): two by two. */
+  .shots-even { grid-template-columns: 1fr 1fr; }
+  .shots-even .shot:last-child { grid-column: auto; }
   .shot a { display: block; cursor: zoom-in; }
   .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
   .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }

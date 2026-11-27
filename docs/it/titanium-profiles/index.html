@@ -47,8 +47,9 @@
       "operatingSystem": "macOS, Windows",
       "applicationCategory": "UtilitiesApplication",
       "image": "https://ggtechnologies.sm/gg-releases/titanium-profiles/card-it.png",
-      "softwareVersion": "0.2.0",
-      "dateModified": "2026-11-26",
+      "screenshot": ["https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/dashboard-it-dark.webp", "https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/profiles-it-dark.webp", "https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/mcp-copy-it-dark.webp", "https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/stats-it-dark.webp"],
+      "softwareVersion": "0.2.1",
+      "dateModified": "2026-11-27",
       "isPartOf": { "@id": "https://ggtechnologies.sm/gg-releases/it/#suite" },
       "publisher": { "@type": "Organization", "@id": "https://ggtechnologies.sm/#organization", "name": "G&G Technologies", "url": "https://ggtechnologies.sm/" }
     },
@@ -265,6 +266,9 @@
   .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
   .shot { margin: 0; }
   .shot:last-child { grid-column: 1 / -1; }
+  /* Screenshots of the same shape (Titanium Profiles): two by two. */
+  .shots-even { grid-template-columns: 1fr 1fr; }
+  .shots-even .shot:last-child { grid-column: auto; }
   .shot a { display: block; cursor: zoom-in; }
   .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
   .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
@@ -383,6 +387,35 @@
         <li><strong>Consumi, log e diagnostica</strong>L'app mostra i consumi di Claude Code di ogni profilo, di oggi e della settimana, e i log mentre vengono scritti; un rapporto di diagnostica è pronto da copiare per l'assistenza.</li>
         <li><strong>L'uso da tastiera e con un lettore di schermo</strong>Tutto funziona da tastiera e con un lettore di schermo; i temi chiaro e scuro rispettano il contrasto WCAG AA.</li>
       </ul>
+    </div>
+  </section>
+  <section class="section" id="shots">
+    <div class="wrap">
+      <p class="eyebrow">Schermate</p>
+      <h2>Le schermate di Titanium Profiles</h2>
+      <p class="lead">Le schermate sono disegnate dall'app stessa, con profili e dati di esempio.</p>
+      <div class="shots shots-even">
+        <figure class="shot">
+          <a class="shot-dark" href="../../titanium-profiles/shots/dashboard-it-dark.webp"><img src="../../titanium-profiles/shots/dashboard-it-dark.webp" width="1600" height="1650" decoding="async" alt="La panoramica: quattro profili con il loro stato (uno in esecuzione, uno in avvio, due fermi), i consumi di Claude Code di oggi e degli ultimi sette giorni, un avviso da controllare e le ultime sessioni."></a>
+          <a class="shot-light" href="../../titanium-profiles/shots/dashboard-it-light.webp"><img src="../../titanium-profiles/shots/dashboard-it-light.webp" width="1600" height="1650" loading="lazy" decoding="async" alt="La panoramica: quattro profili con il loro stato (uno in esecuzione, uno in avvio, due fermi), i consumi di Claude Code di oggi e degli ultimi sette giorni, un avviso da controllare e le ultime sessioni."></a>
+          <figcaption>La panoramica mostra ogni profilo con il suo stato, e quanto è costato Claude Code oggi e nella settimana.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-dark" href="../../titanium-profiles/shots/profiles-it-dark.webp"><img src="../../titanium-profiles/shots/profiles-it-dark.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="La modifica di un profilo isolato nella schermata Profili: icona, nome, colore, note, scorciatoia globale, avvio insieme all'app e le sue cartelle di Claude Desktop e Claude Code."></a>
+          <a class="shot-light" href="../../titanium-profiles/shots/profiles-it-light.webp"><img src="../../titanium-profiles/shots/profiles-it-light.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="La modifica di un profilo isolato nella schermata Profili: icona, nome, colore, note, scorciatoia globale, avvio insieme all'app e le sue cartelle di Claude Desktop e Claude Code."></a>
+          <figcaption>Ogni profilo ha il proprio nome, colore, scorciatoia e cartelle.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-dark" href="../../titanium-profiles/shots/mcp-copy-it-dark.webp"><img src="../../titanium-profiles/shots/mcp-copy-it-dark.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="La copia dei server MCP da un profilo a un altro: il profilo di origine, un avviso sui segreti e tre server da copiare, con i token nascosti e quello già presente segnalato."></a>
+          <a class="shot-light" href="../../titanium-profiles/shots/mcp-copy-it-light.webp"><img src="../../titanium-profiles/shots/mcp-copy-it-light.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="La copia dei server MCP da un profilo a un altro: il profilo di origine, un avviso sui segreti e tre server da copiare, con i token nascosti e quello già presente segnalato."></a>
+          <figcaption>Prima di copiare i server MCP, l'app mostra che cosa verrà copiato e nasconde i segreti.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-dark" href="../../titanium-profiles/shots/stats-it-dark.webp"><img src="../../titanium-profiles/shots/stats-it-dark.webp" width="1600" height="1620" loading="lazy" decoding="async" alt="Le statistiche di un profilo negli ultimi 30 giorni: costo stimato a prezzi di listino, sessioni, token e il costo per giorno diviso per modello."></a>
+          <a class="shot-light" href="../../titanium-profiles/shots/stats-it-light.webp"><img src="../../titanium-profiles/shots/stats-it-light.webp" width="1600" height="1620" loading="lazy" decoding="async" alt="Le statistiche di un profilo negli ultimi 30 giorni: costo stimato a prezzi di listino, sessioni, token e il costo per giorno diviso per modello."></a>
+          <figcaption>Le statistiche stimano quanto costa ogni profilo in Claude Code, dalle trascrizioni sul computer.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
   <section class="section" id="details">

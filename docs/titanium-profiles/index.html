@@ -47,8 +47,9 @@
       "operatingSystem": "macOS, Windows",
       "applicationCategory": "UtilitiesApplication",
       "image": "https://ggtechnologies.sm/gg-releases/titanium-profiles/card-en.png",
-      "softwareVersion": "0.2.0",
-      "dateModified": "2026-11-26",
+      "screenshot": ["https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/dashboard-en-dark.webp", "https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/profiles-en-dark.webp", "https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/mcp-copy-en-dark.webp", "https://ggtechnologies.sm/gg-releases/titanium-profiles/shots/stats-en-dark.webp"],
+      "softwareVersion": "0.2.1",
+      "dateModified": "2026-11-27",
       "isPartOf": { "@id": "https://ggtechnologies.sm/gg-releases/#suite" },
       "publisher": { "@type": "Organization", "@id": "https://ggtechnologies.sm/#organization", "name": "G&G Technologies", "url": "https://ggtechnologies.sm/" }
     },
@@ -265,6 +266,9 @@
   .shots { display: grid; grid-template-columns: 1fr 0.61fr; gap: 20px; align-items: start; }
   .shot { margin: 0; }
   .shot:last-child { grid-column: 1 / -1; }
+  /* Screenshots of the same shape (Titanium Profiles): two by two. */
+  .shots-even { grid-template-columns: 1fr 1fr; }
+  .shots-even .shot:last-child { grid-column: auto; }
   .shot a { display: block; cursor: zoom-in; }
   .shot img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--panel); }
   .shot figcaption { color: var(--faint); font-size: 0.88rem; margin-top: 12px; }
@@ -383,6 +387,35 @@
         <li><strong>Usage, logs and diagnostics</strong>The app shows the Claude Code usage of each profile, for today and for the week, and the logs as they are written; a diagnostics report is ready to copy for support.</li>
         <li><strong>Keyboard and screen reader use</strong>Everything works from the keyboard and with a screen reader; light and dark themes meet WCAG AA contrast.</li>
       </ul>
+    </div>
+  </section>
+  <section class="section" id="shots">
+    <div class="wrap">
+      <p class="eyebrow">Screenshots</p>
+      <h2>Screenshots of Titanium Profiles</h2>
+      <p class="lead">The app itself draws these screenshots, with sample profiles and data.</p>
+      <div class="shots shots-even">
+        <figure class="shot">
+          <a class="shot-dark" href="shots/dashboard-en-dark.webp"><img src="shots/dashboard-en-dark.webp" width="1600" height="1650" decoding="async" alt="The dashboard: four profiles with their state (one running, one starting, two stopped), Claude Code usage for today and the last seven days, a warning to check and the latest sessions."></a>
+          <a class="shot-light" href="shots/dashboard-en-light.webp"><img src="shots/dashboard-en-light.webp" width="1600" height="1650" loading="lazy" decoding="async" alt="The dashboard: four profiles with their state (one running, one starting, two stopped), Claude Code usage for today and the last seven days, a warning to check and the latest sessions."></a>
+          <figcaption>The dashboard shows every profile with its state, and what Claude Code has cost today and this week.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-dark" href="shots/profiles-en-dark.webp"><img src="shots/profiles-en-dark.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="Editing an isolated profile on the Profiles screen: icon, name, colour, notes, global shortcut, starting with the app, and its own Claude Desktop and Claude Code folders."></a>
+          <a class="shot-light" href="shots/profiles-en-light.webp"><img src="shots/profiles-en-light.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="Editing an isolated profile on the Profiles screen: icon, name, colour, notes, global shortcut, starting with the app, and its own Claude Desktop and Claude Code folders."></a>
+          <figcaption>Each profile has its own name, colour, shortcut and folders.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-dark" href="shots/mcp-copy-en-dark.webp"><img src="shots/mcp-copy-en-dark.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="Copying MCP servers from one profile to another: the source profile, a warning about secrets, and three servers to copy, with their tokens hidden and the one already present marked."></a>
+          <a class="shot-light" href="shots/mcp-copy-en-light.webp"><img src="shots/mcp-copy-en-light.webp" width="1600" height="1490" loading="lazy" decoding="async" alt="Copying MCP servers from one profile to another: the source profile, a warning about secrets, and three servers to copy, with their tokens hidden and the one already present marked."></a>
+          <figcaption>Before copying MCP servers, the app shows what will be copied and hides the secrets.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="shot-dark" href="shots/stats-en-dark.webp"><img src="shots/stats-en-dark.webp" width="1600" height="1620" loading="lazy" decoding="async" alt="The statistics of one profile over 30 days: cost estimated at list prices, sessions, tokens, and the cost per day split by model."></a>
+          <a class="shot-light" href="shots/stats-en-light.webp"><img src="shots/stats-en-light.webp" width="1600" height="1620" loading="lazy" decoding="async" alt="The statistics of one profile over 30 days: cost estimated at list prices, sessions, tokens, and the cost per day split by model."></a>
+          <figcaption>The statistics estimate what each profile costs in Claude Code, from the transcripts on the computer.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
   <section class="section" id="details">

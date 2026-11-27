@@ -6,6 +6,48 @@
   "schema": 1,
   "app": "titanium-profiles",
   "name": "Titanium Profiles",
+  "version": "0.2.1",
+  "build": "0.2.1",
+  "published": "2026-11-27T09:17:14Z",
+  "tag": "titanium-profiles-v0.2.1",
+  "team": "VL2V35Z2H7",
+  "notes": "- Updates: a check that fails after a version was verified keeps Show in Finder instead of offering Download again; after \"a newer version is already installed\", the same update is no longer offered again; a downloaded update kept across a restart is checked again in full and used, and one cut short or no longer offered is deleted; Install and Relaunch and Download act on the version shown, even while an automatic check runs.\n- Logs: choosing another log shows \"Loading…\" instead of the previous log under the new name; a rotation while paused no longer mixes entries of the old and the new file; two MCP server logs whose names differ only by a final number are no longer mixed up; logs -f no longer loses entries after a rotation.\n- Moving a removed profile's data to the Trash says what went and what stayed when it fails partway, keeps a profile folder that is a link, and takes the whole profile folder after the profiles folder was changed. A Claude Code folder picked by hand next to a profile's data now shows as Custom, and is kept.\n- Also fixed: Diagnostics says again which value is out of range; a profile that cannot be created leaves no empty folders; two profiles started at the same moment both keep their last start; screen readers hear the count of each new log filter; smaller fixes in Settings, the dashboard and Statistics.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-profiles-v0.2.1",
+  "assets": [
+    {
+      "platform": "macos-arm64",
+      "kind": "dmg",
+      "signed": true,
+      "file": "TitaniumProfiles-0.2.1-macos-arm64.dmg",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.2.1/TitaniumProfiles-0.2.1-macos-arm64.dmg",
+      "size": 5132989,
+      "sha256": "47a6c5850fd21e9a6c09d8e6dda593e88942fd6838e5ee7fac2d41cc6a43d6b7"
+    },
+    {
+      "platform": "windows-arm64",
+      "kind": "exe",
+      "signed": false,
+      "file": "TitaniumProfiles-0.2.1-windows-arm64.exe",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.2.1/TitaniumProfiles-0.2.1-windows-arm64.exe",
+      "size": 3788241,
+      "sha256": "6790153e8f2380fb02d5408106ad08edd6aa3865ffc026277238f05fe129aba2"
+    },
+    {
+      "platform": "windows-x64",
+      "kind": "exe",
+      "signed": false,
+      "file": "TitaniumProfiles-0.2.1-windows-x64.exe",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.2.1/TitaniumProfiles-0.2.1-windows-x64.exe",
+      "size": 4403649,
+      "sha256": "85207c0e892572c51606a4033268f156f5515927b6498e344df525e64153b396"
+    }
+  ]
+}
+,
+{
+  "schema": 1,
+  "app": "titanium-profiles",
+  "name": "Titanium Profiles",
   "version": "0.2.0",
   "build": "0.2.0",
   "published": "2026-11-26T18:29:58Z",
