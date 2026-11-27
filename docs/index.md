@@ -43,7 +43,7 @@ Titanium Monitor keeps an eye on the health of the Mac from the menu bar. It sho
 
 Titanium Profiles keeps several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one.
 
-It is an unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials.
+It is an unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials. It neither filters nor monitors the data exchanged with Claude: Titanium Fences does that.
 
 - Systems: macOS, Windows
 - Page: https://ggtechnologies.sm/gg-releases/titanium-profiles/
@@ -118,7 +118,7 @@ Titanium Monitor tiene d'occhio la salute del Mac dalla barra dei menu. Mostra c
 
 Titanium Profiles tiene affiancati più account di Claude Desktop sullo stesso computer, per esempio uno aziendale e uno personale.
 
-È uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali.
+È uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali. Non filtra né monitora i dati scambiati con Claude: per questo serve Titanium Fences.
 
 - Sistemi: macOS, Windows
 - Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-profiles/
