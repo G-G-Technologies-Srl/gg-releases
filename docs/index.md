@@ -2,7 +2,7 @@
 
 The Titanium apps work on your computer and verify every update.
 
-Titanium is the suite of apps by [G&G Technologies](https://ggtechnologies.sm/). This page lists the latest release of each app, and it is where the installed apps find their updates.
+Titanium is the suite of desktop apps by [G&G Technologies](https://ggtechnologies.sm/). The name comes from titanium, a light and strong metal, and from Mount Titano in San Marino, where the suite was developed. The apps are light, work on your computer and are designed in Europe to reduce the personal data that leaves it. This page lists the latest release of each app, and it is where the installed apps find their updates.
 
 - Page: https://ggtechnologies.sm/gg-releases/
 - Every app has its own page, with what it does and its requirements, and once released the download for each system, the release notes and every version: `https://ggtechnologies.sm/gg-releases/<id>/`, for example https://ggtechnologies.sm/gg-releases/titanium-monitor/
@@ -15,7 +15,7 @@ Which version of each app is published, if any, is in [index.json](https://ggtec
 
 ### Titanium AI
 
-Titanium AI runs artificial intelligence locally, on Apple silicon. It is an inference runtime built around unified memory, with an OpenAI-compatible API, to run language models on your own Mac.
+Titanium AI is a Mac engine that runs language models locally, on Apple silicon. It is built around unified memory, to answer quickly while taking little memory, and offers an OpenAI-compatible API: conversations stay on the Mac.
 
 - Systems: macOS, Apple silicon
 - Page: https://ggtechnologies.sm/gg-releases/titanium-ai/
@@ -23,7 +23,7 @@ Titanium AI runs artificial intelligence locally, on Apple silicon. It is an inf
 
 ### Titanium Fences
 
-Titanium Fences controls what AI applications connect to. It allows only the destinations you have authorized, blocks the others and records every decision, keeping metadata only.
+Titanium Fences controls what leaves the computer for AI services. It allows only authorized destinations, blocks the others and keeps a permanent log of every decision, without recording content. Before a document or a chat reaches a remote model, in the EU, the USA or China, it automatically replaces sensitive and confidential data with placeholders, to reduce the exposure of personal data.
 
 - Systems: macOS
 - Page: https://ggtechnologies.sm/gg-releases/titanium-fences/
@@ -31,7 +31,7 @@ Titanium Fences controls what AI applications connect to. It allows only the des
 
 ### Titanium Monitor
 
-Titanium Monitor is a menu bar utility that shows how CPU, GPU, memory, network and disk are used, says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.
+Titanium Monitor keeps an eye on the health of the Mac from the menu bar. It shows how CPU, GPU, memory, network and disk are used, and for each process how much traffic it sends and where, so you can see when a program talks to the outside unexpectedly. It says in plain words what is weighing the system down, and frees the space taken by caches and leftovers, always through the Trash.
 
 **Free, including future versions.**
 
@@ -81,7 +81,7 @@ The Titanium apps look for their updates on this site, and verify each download 
 
 Le app Titanium lavorano sul vostro computer e verificano ogni aggiornamento.
 
-Titanium è la suite di app di [G&G Technologies](https://ggtechnologies.sm/). Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.
+Titanium è la suite di app desktop di [G&G Technologies](https://ggtechnologies.sm/). Il nome viene dal titanio, un metallo leggero e resistente, e dal Monte Titano di San Marino, dove la suite è stata sviluppata. Le app sono leggere, lavorano sul vostro computer e sono progettate in Europa per ridurre i dati personali che ne escono. Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.
 
 - Pagina: https://ggtechnologies.sm/gg-releases/it/
 - Ogni app ha la sua pagina, con che cosa fa e i requisiti, e una volta rilasciata il download per ogni sistema, le note di rilascio e tutte le versioni: `https://ggtechnologies.sm/gg-releases/<id>/`, per esempio https://ggtechnologies.sm/gg-releases/it/titanium-monitor/
@@ -93,21 +93,21 @@ La versione pubblicata di ogni app, se c'è, si legge in [index.json](https://gg
 
 ### Titanium AI
 
-Titanium AI esegue l'intelligenza artificiale in locale, su Apple silicon. È un runtime di inferenza costruito attorno alla memoria unificata, con un'API compatibile con OpenAI, per eseguire i modelli linguistici sul proprio Mac.
+Titanium AI è un motore per Mac che esegue i modelli linguistici in locale, su Apple silicon. È costruito attorno alla memoria unificata per rispondere presto occupando poca memoria, e offre un'API compatibile con OpenAI: le conversazioni restano sul Mac.
 
 - Sistemi: macOS, Apple silicon
 - Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-ai/
 
 ### Titanium Fences
 
-Titanium Fences controlla a che cosa si collegano le applicazioni AI. Consente solo le destinazioni autorizzate, blocca le altre e registra ogni decisione, tenendo solo i metadati.
+Titanium Fences controlla che cosa esce dal computer verso i servizi di intelligenza artificiale. Lascia passare solo le destinazioni autorizzate, blocca le altre e tiene un registro permanente di ogni decisione, senza registrare i contenuti. Prima che un documento o una chat arrivino a un modello remoto, nell'UE, negli USA o in Cina, sostituisce in automatico i dati sensibili e riservati con segnaposto, per ridurre l'esposizione dei dati personali.
 
 - Sistemi: macOS
 - Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-fences/
 
 ### Titanium Monitor
 
-Titanium Monitor è un'utility della barra dei menu che mostra come vengono usati CPU, GPU, memoria, rete e disco, dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.
+Titanium Monitor tiene d'occhio la salute del Mac dalla barra dei menu. Mostra come vengono usati CPU, GPU, memoria, rete e disco, e per ogni processo quanto traffico invia e verso dove, così si vede se un programma comunica con l'esterno quando non ve lo aspettate. Dice con parole semplici che cosa appesantisce il sistema e libera lo spazio occupato da cache e residui, sempre attraverso il Cestino.
 
 **Gratuita, anche nelle versioni future.**
 
