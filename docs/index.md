@@ -2,7 +2,7 @@
 
 The Titanium apps work on your computer and verify every update.
 
-Titanium is the suite of desktop apps by [G&G Technologies](https://ggtechnologies.sm/). The name comes from titanium, a light and strong metal, and from Mount Titano in San Marino, where the suite was developed. The apps are light, work on your computer and are designed in Europe to reduce the personal data that leaves it. This page lists the latest release of each app, and it is where the installed apps find their updates.
+Titanium takes its name from titanium, a light and strong metal, and from Mount Titano in San Marino, where [G&G Technologies](https://ggtechnologies.sm/) develops the suite. These are light desktop apps that work on your computer: we design them in Europe to reduce the personal data that leaves it. This page offers the latest version of each app, and it is where the installed apps find their updates.
 
 - Page: https://ggtechnologies.sm/gg-releases/
 - Every app has its own page, with what it does and its requirements, and once released the download for each system, the release notes and every version: `https://ggtechnologies.sm/gg-releases/<id>/`, for example https://ggtechnologies.sm/gg-releases/titanium-monitor/
@@ -45,6 +45,8 @@ Titanium Profiles keeps several Claude Desktop accounts side by side on the same
 
 It is an unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials. It neither filters nor monitors the data exchanged with Claude: Titanium Fences does that.
 
+**Free, including future versions.**
+
 - Systems: macOS, Windows
 - Page: https://ggtechnologies.sm/gg-releases/titanium-profiles/
 - Latest version: https://ggtechnologies.sm/gg-releases/titanium-profiles/latest.json
@@ -81,7 +83,7 @@ The Titanium apps look for their updates on this site, and verify each download 
 
 Le app Titanium lavorano sul vostro computer e verificano ogni aggiornamento.
 
-Titanium è la suite di app desktop di [G&G Technologies](https://ggtechnologies.sm/). Il nome viene dal titanio, un metallo leggero e resistente, e dal Monte Titano di San Marino, dove la suite è stata sviluppata. Le app sono leggere, lavorano sul vostro computer e sono progettate in Europa per ridurre i dati personali che ne escono. Questa pagina elenca l'ultima versione di ogni app, ed è il luogo in cui le app installate trovano i propri aggiornamenti.
+Titanium prende il nome dal titanio, un metallo leggero e resistente, e dal Monte Titano, a San Marino, dove [G&G Technologies](https://ggtechnologies.sm/) sviluppa la suite. Sono app desktop leggere, che lavorano sul vostro computer: le progettiamo in Europa per ridurre i dati personali che ne escono. Da questa pagina si scarica l'ultima versione di ogni app, ed è qui che le app installate trovano i propri aggiornamenti.
 
 - Pagina: https://ggtechnologies.sm/gg-releases/it/
 - Ogni app ha la sua pagina, con che cosa fa e i requisiti, e una volta rilasciata il download per ogni sistema, le note di rilascio e tutte le versioni: `https://ggtechnologies.sm/gg-releases/<id>/`, per esempio https://ggtechnologies.sm/gg-releases/it/titanium-monitor/
@@ -119,6 +121,8 @@ Titanium Monitor tiene d'occhio la salute del Mac dalla barra dei menu. Mostra c
 Titanium Profiles tiene affiancati più account di Claude Desktop sullo stesso computer, per esempio uno aziendale e uno personale. È utile anche con un solo account: le statistiche stimano, ai prezzi di listino delle API di Anthropic, quanto costerebbe il vostro uso di Claude Code senza la tariffa fissa dell'abbonamento.
 
 È uno strumento non ufficiale, non affiliato ad Anthropic. Non modifica mai Claude Desktop e non legge mai le credenziali. Non filtra né monitora i dati scambiati con Claude: per questo serve Titanium Fences.
+
+**Gratuita, anche nelle versioni future.**
 
 - Sistemi: macOS, Windows
 - Pagina: https://ggtechnologies.sm/gg-releases/it/titanium-profiles/
