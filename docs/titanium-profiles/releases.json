@@ -6,6 +6,48 @@
   "schema": 1,
   "app": "titanium-profiles",
   "name": "Titanium Profiles",
+  "version": "0.3.0",
+  "build": "0.3.0",
+  "published": "2026-11-27T13:35:13Z",
+  "tag": "titanium-profiles-v0.3.0",
+  "team": "VL2V35Z2H7",
+  "notes": "- Profile cards, redrawn: the profile color runs along the left edge, which is also the grip to reorder, and an open profile has its border in that color. The state fits in one line, today's Claude Code cost is the main figure with the last 7 days beside it, and the details open in a dialog from the ⋯ menu.\n- Profile icon: a circle filled with the profile color, with its state as a ring around it. While dragging, a bar shows where the profile will land.\n- Tray menu, regrouped: Open Titanium Profiles first, then the profiles under a title that counts them, each with its global shortcut, then Start all, Settings…, Check for Updates… and Quit. On macOS the menu bar icon shows how many profiles are running (2/5), which can be switched off in Settings › General; on Windows a click on the icon opens the window and the right button the menu.\n- Settings in five tabs (General, Profiles, Statistics, Data, Updates), laid out like the settings of a Mac app.\n- The G&G Technologies logo at the bottom of the sidebar opens the maker's site.\n- Fixed: on macOS 27 and later the tray menu shows again the colored dot of each profile's state.",
+  "page": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/tag/titanium-profiles-v0.3.0",
+  "assets": [
+    {
+      "platform": "macos-arm64",
+      "kind": "dmg",
+      "signed": true,
+      "file": "TitaniumProfiles-0.3.0-macos-arm64.dmg",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.3.0/TitaniumProfiles-0.3.0-macos-arm64.dmg",
+      "size": 5142479,
+      "sha256": "9449b888eb44d21977d2284cacde95738b313953181a148af551aaeee21c8959"
+    },
+    {
+      "platform": "windows-arm64",
+      "kind": "exe",
+      "signed": false,
+      "file": "TitaniumProfiles-0.3.0-windows-arm64.exe",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.3.0/TitaniumProfiles-0.3.0-windows-arm64.exe",
+      "size": 3795641,
+      "sha256": "8c8f26f3c2698b177ee093ff8353380171fda626b6fa0dc17250ec62dba8696b"
+    },
+    {
+      "platform": "windows-x64",
+      "kind": "exe",
+      "signed": false,
+      "file": "TitaniumProfiles-0.3.0-windows-x64.exe",
+      "url": "https://github.com/G-G-Technologies-Srl/gg-releases/releases/download/titanium-profiles-v0.3.0/TitaniumProfiles-0.3.0-windows-x64.exe",
+      "size": 4401981,
+      "sha256": "30f425f20ab0175a2308bbe637caa4417e9b7e17606243d56c030eca25670e6d"
+    }
+  ]
+}
+,
+{
+  "schema": 1,
+  "app": "titanium-profiles",
+  "name": "Titanium Profiles",
   "version": "0.2.1",
   "build": "0.2.1",
   "published": "2026-11-27T09:17:14Z",
