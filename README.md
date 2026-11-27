@@ -42,9 +42,10 @@
       <sub><b>macOS</b></sub>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-profiles/">Titanium Profiles</a></h3>
+      <h3><a href="https://ggtechnologies.sm/gg-releases/titanium-profiles/">Titanium Profiles</a> &nbsp;<sup><code>Free</code></sup></h3>
       <p>Titanium Profiles keeps several Claude Desktop accounts side by side on the same computer, for example a company account and a personal one. It is useful with a single account too: its statistics estimate, at Anthropic's API list prices, what your use of Claude Code would cost without the flat-rate subscription.</p>
       <p><sub>It is an unofficial tool, not affiliated with Anthropic. It never modifies Claude Desktop and never reads credentials. It neither filters nor monitors the data exchanged with Claude: Titanium Fences does that.</sub></p>
+      <p><b>Free, including future versions.</b></p>
       <sub><b>macOS</b> · <b>Windows</b></sub>
     </td>
   </tr>
